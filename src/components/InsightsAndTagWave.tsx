@@ -201,7 +201,7 @@ export default function InsightsAndTagWave() {
 
           <div
             ref={cloudRef}
-            className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 p-6 sm:p-10 rounded-3xl bg-white/80 border border-stone-200/80 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.06)] backdrop-blur-md"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 sm:gap-3 p-3.5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/80 border border-stone-200/80 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.06)] backdrop-blur-md"
           >
             {ATTRIBUTES.map((attr) => {
               const Icon = attr.icon;
@@ -216,25 +216,24 @@ export default function InsightsAndTagWave() {
                     navigate('#categories', { title: attr.name });
                   }}
                   style={isSelected ? { backgroundColor: attr.accent, borderColor: attr.accent } : {}}
-                  className={`group relative flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl text-[12px] sm:text-[13px] font-semibold transition-all duration-300 cursor-pointer ${
+                  className={`group relative flex items-center gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-[11px] sm:text-[13px] font-semibold transition-all duration-300 cursor-pointer w-full sm:w-auto min-w-0 text-left ${
                     isSelected
-                      ? 'text-white shadow-lg scale-105'
-                      : 'bg-white text-stone-700 hover:text-stone-950 border border-stone-200 hover:border-stone-300 hover:shadow-md hover:-translate-y-0.5'
+                      ? 'text-white shadow-md scale-[1.02] sm:scale-105'
+                      : 'bg-white text-stone-700 hover:text-stone-950 border border-stone-200 hover:border-stone-300 hover:shadow-xs'
                   }`}
                 >
                   <div
-                    className={`w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 rounded-lg flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isSelected
                         ? 'bg-white/20'
                         : 'bg-stone-100 group-hover:bg-stone-200'
                     }`}
-                    style={isSelected ? {} : {}}
                   >
-                    <Icon size={13} className={isSelected ? 'text-white' : 'text-stone-500'} style={!isSelected ? { color: attr.accent } : {}} />
+                    <Icon size={12} className={isSelected ? 'text-white' : 'text-stone-500'} style={!isSelected ? { color: attr.accent } : {}} />
                   </div>
-                  <span>{attr.name}</span>
+                  <span className="truncate">{attr.name}</span>
                   {!isSelected && (
-                    <span className="hidden sm:inline-block ml-0.5 text-[9px] font-bold uppercase tracking-widest text-stone-400 group-hover:text-stone-500">
+                    <span className="hidden lg:inline-block ml-0.5 text-[9px] font-bold uppercase tracking-widest text-stone-400 group-hover:text-stone-500 shrink-0">
                       {attr.category}
                     </span>
                   )}

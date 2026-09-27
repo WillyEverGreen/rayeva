@@ -484,21 +484,43 @@ export default function StarterKitAndPartners() {
 
         {/* ---------------- 2. VERIFIED BRAND PARTNERS SHOWCASE ---------------- */}
         <div ref={partnersRef} className="pt-8 border-t border-stone-200/60">
-          {/* Section Header */}
-          <div className="mb-8 sm:mb-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E3EFE7] text-[#244835] text-xs font-semibold uppercase tracking-wider mb-3">
-              <ShieldCheck size={13} className="text-[#187E91]" />
-              <span>Verified Ethical Suppliers</span>
+          {/* Section Header with Clean Carousel Controls */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 gap-4">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E3EFE7] text-[#244835] text-xs font-semibold uppercase tracking-wider mb-2.5">
+                <ShieldCheck size={13} className="text-[#187E91]" />
+                <span>Verified Ethical Suppliers</span>
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-stone-900 tracking-tight">
+                Our Certified Brand Partners
+              </h3>
+              <p className="mt-1.5 text-stone-600 text-xs sm:text-sm max-w-xl leading-relaxed">
+                Every enterprise on Rayeva adheres to rigorous laboratory audits, closed-loop packaging mandates, and fair artisan livelihoods.
+              </p>
             </div>
-            <h3 className="font-serif text-3xl sm:text-4xl font-normal text-stone-900 tracking-tight">
-              Our Certified Brand Partners
-            </h3>
-            <p className="mt-2 text-stone-600 text-sm max-w-xl">
-              Every enterprise on Rayeva adheres to rigorous laboratory audits, closed-loop packaging mandates, and fair artisan livelihoods.
-            </p>
+
+            {/* Header Arrow Controls - Accessible, responsive, never overlaps card text */}
+            <div className="flex items-center gap-2 self-start sm:self-end shrink-0">
+              <button
+                type="button"
+                onClick={() => nudgeSlider('left')}
+                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
+                aria-label="Previous Partner"
+              >
+                <ChevronLeft size={18} className="stroke-[2.5]" />
+              </button>
+              <button
+                type="button"
+                onClick={() => nudgeSlider('right')}
+                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
+                aria-label="Next Partner"
+              >
+                <ChevronRight size={18} className="stroke-[2.5]" />
+              </button>
+            </div>
           </div>
 
-          {/* Infinite Seamless Slider with Side Navigation Arrows & Edge Vignettes */}
+          {/* Infinite Seamless Slider with Edge Vignettes */}
           <div
             className="relative w-full overflow-hidden py-4 -my-4 group/slider"
             onMouseEnter={handleSliderMouseEnter}
@@ -506,54 +528,28 @@ export default function StarterKitAndPartners() {
             onTouchStart={handleSliderMouseEnter}
             onTouchEnd={handleSliderMouseLeave}
           >
-            {/* Left & Right Soft Fade Masks */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
-
-            {/* Side Floating Left Navigation Arrow */}
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                nudgeSlider('left');
-              }}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur-md border border-stone-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_10px_26px_rgba(24,126,145,0.22)] hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
-              aria-label="Previous Partner"
-            >
-              <ChevronLeft size={22} className="stroke-[2.5] -translate-x-0.5" />
-            </button>
-
-            {/* Side Floating Right Navigation Arrow */}
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                nudgeSlider('right');
-              }}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur-md border border-stone-200/90 shadow-[0_6px_20px_rgba(0,0,0,0.12)] hover:shadow-[0_10px_26px_rgba(24,126,145,0.22)] hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
-              aria-label="Next Partner"
-            >
-              <ChevronRight size={22} className="stroke-[2.5] translate-x-0.5" />
-            </button>
+            {/* Left & Right Soft Fade Masks (narrow on mobile to preserve card view) */}
+            <div className="absolute left-0 top-0 bottom-0 w-4 sm:w-16 md:w-24 bg-gradient-to-r from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-4 sm:w-16 md:w-24 bg-gradient-to-l from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
 
             {/* Seamless Infinite Gliding Track */}
             <div
               ref={sliderTrackRef}
-              className="flex gap-6 w-max select-none will-change-transform"
+              className="flex gap-4 sm:gap-6 w-max select-none will-change-transform px-1"
             >
               {[...PARTNERS, ...PARTNERS].map((brand, idx) => (
                 <div
                   key={`${brand.name}-${idx}`}
-                  className="w-[320px] sm:w-[380px] shrink-0 bg-white rounded-3xl p-6 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between group cursor-default"
+                  className="w-[280px] xs:w-[320px] sm:w-[360px] md:w-[380px] shrink-0 bg-white rounded-2xl sm:rounded-3xl p-4.5 xs:p-5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
                 >
                   <div>
                     {/* Standout Brand Logo Showcase Header - Clean Pure Surface */}
-                    <div className="relative mb-5 h-24 sm:h-26 rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
+                    <div className="relative mb-3.5 sm:mb-5 h-20 sm:h-24 rounded-xl sm:rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center px-4 sm:px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
                       {/* Brand Logo Graphic - Tightly Cropped, High-Res, Transparent */}
                       <img
                         src={brand.logo}
                         alt={`${brand.name} logo`}
-                        className="relative z-10 max-h-12 sm:max-h-14 max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+                        className="relative z-10 max-h-10 sm:max-h-12 max-w-[170px] sm:max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
                         loading="lazy"
                         draggable={false}
                         onError={(e) => {
@@ -567,7 +563,7 @@ export default function StarterKitAndPartners() {
 
                       {/* Fallback stylized brand badge */}
                       <div
-                        className="hidden relative z-10 items-center justify-center font-serif text-xl font-bold tracking-tight"
+                        className="hidden relative z-10 items-center justify-center font-serif text-lg sm:text-xl font-bold tracking-tight"
                         style={{ color: brand.accent }}
                       >
                         {brand.name}
@@ -575,46 +571,46 @@ export default function StarterKitAndPartners() {
                     </div>
 
                     {/* Category & Audited Badge */}
-                    <div className="flex items-center justify-between gap-3 mb-2.5">
+                    <div className="flex items-center justify-between gap-2 mb-2 sm:mb-2.5">
                       <span
-                        className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full"
+                        className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2 sm:px-2.5 py-0.5 rounded-full truncate"
                         style={{ color: brand.accent, backgroundColor: `${brand.accent}14` }}
                       >
                         {brand.category}
                       </span>
-                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full">
+                      <span className="inline-flex items-center gap-1 text-[9.5px] sm:text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full shrink-0">
                         <Check size={10} className="stroke-[3] text-emerald-600" />
                         <span>Audited</span>
                       </span>
                     </div>
 
                     {/* Brand Name */}
-                    <h4 className="font-serif text-2xl font-normal text-stone-900 group-hover:text-[#187E91] transition-colors leading-tight">
+                    <h4 className="font-serif text-xl sm:text-2xl font-normal text-stone-900 group-hover:text-[#187E91] transition-colors leading-tight">
                       {brand.name}
                     </h4>
 
-                    {/* Tagline */}
-                    <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed mt-2.5 line-clamp-3">
+                    {/* Tagline - Fully readable on all devices without truncation */}
+                    <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed mt-2 sm:mt-2.5 font-normal">
                       {brand.tagline}
                     </p>
 
                     {/* Core Highlight */}
-                    <div className="mt-4 p-3 rounded-xl bg-stone-50/90 border border-stone-200/70 text-xs font-medium text-stone-800 flex items-start gap-2.5">
+                    <div className="mt-3.5 sm:mt-4 p-2.5 sm:p-3 rounded-xl bg-stone-50/90 border border-stone-200/70 text-[11px] sm:text-xs font-medium text-stone-800 flex items-start gap-2 sm:gap-2.5">
                       <span
-                        className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                        className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
                         style={{ backgroundColor: `${brand.accent}20`, color: brand.accent }}
                       >
-                        <Check size={12} className="stroke-[3]" />
+                        <Check size={11} className="stroke-[3]" />
                       </span>
                       <span className="leading-snug">{brand.highlight}</span>
                     </div>
 
                     {/* Credentials Micro-Badges */}
-                    <div className="mt-3.5 flex flex-wrap gap-1.5">
+                    <div className="mt-3 sm:mt-3.5 flex flex-wrap gap-1 sm:gap-1.5">
                       {brand.credentials.map((cred, cIdx) => (
                         <span
                           key={cIdx}
-                          className="text-[10px] font-medium px-2.5 py-1 rounded-full bg-[#FAF8F3] text-stone-600 border border-stone-200/60"
+                          className="text-[9.5px] sm:text-[10px] font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#FAF8F3] text-stone-600 border border-stone-200/60"
                         >
                           {cred}
                         </span>
@@ -623,7 +619,7 @@ export default function StarterKitAndPartners() {
                   </div>
 
                   {/* Card Footer Action */}
-                  <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <div className="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-stone-100 flex items-center justify-between">
                     <button
                       type="button"
                       onClick={() => navigate('#categories', { title: brand.name })}
