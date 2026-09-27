@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 dist/
 
@@ -16,9 +16,12 @@ check_*.py
 snap_*.py
 capture_*.py
 
-# Screenshot artifacts from dev
-*.png
-*.jpg
+# Screenshot artifacts from dev in root
+/*.png
+/*.jpg
+!src/**/*.png
+!src/**/*.jpg
+!src/**/*.jpeg
 !public/**/*.png
 !public/**/*.jpg
 !public/**/*.jpeg
