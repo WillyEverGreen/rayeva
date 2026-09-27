@@ -116,30 +116,37 @@ const DIVIDER_SRC_MAP: Record<BotanicalDividerVariant, { src: string; alt: strin
 export function BotanicalVineDivider({
   className = '',
   variant = 'jasmine',
-  maxWidth = 920,
-  opacity = 95,
+  maxWidth = 600,
+  opacity = 90,
   animate = true,
 }: BotanicalVineDividerProps) {
   const item = DIVIDER_SRC_MAP[variant] || DIVIDER_SRC_MAP.jasmine;
 
   return (
     <div
-      className={`w-full flex items-center justify-center my-8 sm:my-12 md:my-16 px-4 select-none pointer-events-none ${className}`}
+      className={`w-full flex items-center justify-center my-5 sm:my-7 md:my-9 px-4 select-none pointer-events-none ${className}`}
       aria-hidden="true"
     >
       <div
-        className="relative flex items-center justify-center w-full transition-transform duration-700 ease-out"
-        style={{ maxWidth: `${maxWidth}px` }}
+        className="relative flex items-center justify-center w-full gap-2 sm:gap-3.5 transition-transform duration-700 ease-out"
+        style={{ maxWidth: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth }}
       >
+        {/* Left hairline accent with delicate fade-in */}
+        <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-[#244835]/15 to-[#244835]/35 min-w-[16px] sm:min-w-[32px]" />
+
+        {/* Natural-scale, pixel-crisp botanical motif (never blown up or stretched) */}
         <img
           src={item.src}
           alt={item.alt}
-          className={`w-full h-auto object-contain transition-opacity duration-500 filter drop-shadow-2xs ${
+          className={`shrink-0 h-4 sm:h-5 md:h-[22px] w-auto max-w-[130px] sm:max-w-[170px] md:max-w-[200px] object-contain transition-opacity duration-500 filter drop-shadow-2xs ${
             animate ? 'hover:scale-[1.01]' : ''
           }`}
           style={{ opacity: opacity / 100 }}
           loading="lazy"
         />
+
+        {/* Right hairline accent with delicate fade-out */}
+        <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-[#244835]/15 to-[#244835]/35 min-w-[16px] sm:min-w-[32px]" />
       </div>
     </div>
   );
@@ -251,14 +258,14 @@ export function DriftingBotanicals({
 export function BotanicalLandscapeDivider({ className = '' }: { className?: string }) {
   return (
     <div
-      className={`w-full relative overflow-hidden select-none pointer-events-none my-6 sm:my-10 ${className}`}
+      className={`w-full relative overflow-hidden select-none pointer-events-none my-4 sm:my-6 ${className}`}
       aria-hidden="true"
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 opacity-45 hover:opacity-60 transition-opacity duration-700">
+      <div className="max-w-[680px] mx-auto px-4 opacity-35 hover:opacity-50 transition-opacity duration-700">
         <img
           src="/extracted/landscapes/landscape_meadow_mountains.png"
           alt=""
-          className="w-full h-16 sm:h-24 md:h-28 object-cover object-bottom"
+          className="w-full h-8 sm:h-11 md:h-12 object-contain object-bottom mx-auto"
           loading="lazy"
         />
       </div>

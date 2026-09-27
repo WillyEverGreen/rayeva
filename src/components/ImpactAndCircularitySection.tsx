@@ -162,7 +162,7 @@ export default function ImpactAndCircularitySection() {
         </div>
 
         {/* Hand-Illustrated Daisy & Botanical Rule Divider */}
-        <BotanicalVineDivider variant="daisy" maxWidth={880} className="my-10 sm:my-14" />
+        <BotanicalVineDivider variant="daisy" maxWidth={560} className="my-6 sm:my-8" />
 
         {/* ---------------- 3. THE PLASTIC CRISIS (EXACT RED NUMBERS) & RECYCLING RESPONSE ---------------- */}
         <div className="pt-2">
@@ -170,7 +170,7 @@ export default function ImpactAndCircularitySection() {
         </div>
 
         {/* Minimalist Sprout Divider between Crisis and Rayeva Tree */}
-        <BotanicalVineDivider variant="sprout" maxWidth={760} className="my-8 sm:my-12" />
+        <BotanicalVineDivider variant="sprout" maxWidth={520} className="my-5 sm:my-7" />
 
         {/* ---------------- 4. THE INTERACTIVE BOTANICAL RAYEVA TREE (SCULPTED LIVING CANOPY) ---------------- */}
         <div className="pt-4">

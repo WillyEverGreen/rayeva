@@ -120,13 +120,13 @@ function HomePage() {
       <TestimonialsAndAboutUs />
 
       {/* Minimalist Botanical Sprout Divider */}
-      <BotanicalVineDivider variant="sprout" maxWidth={760} className="my-4 sm:my-8" />
+      <BotanicalVineDivider variant="sprout" maxWidth={540} className="my-4 sm:my-6" />
 
       {/* 14. Featured In Press: Climatora Founder Story Feature */}
       <PressBanner />
 
       {/* Hand-Illustrated Botanical Jasmine Vine Page Ender (Connecting Press Spotlight to Newsletter) */}
-      <BotanicalVineDivider variant="jasmine" maxWidth={920} className="my-6 sm:my-12" />
+      <BotanicalVineDivider variant="jasmine" maxWidth={580} className="my-5 sm:my-7" />
 
       {/* 15. Get Insights & Join & Partner: Newsletter + 3 Member Portals */}
       <JoinAndPartnerSection />

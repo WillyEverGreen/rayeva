@@ -1163,8 +1163,8 @@ Verified by Rayeva Circular Marketplace Engine
         </div>
 
         {/* Botanical Flourish Divider */}
-        <div className="my-14">
-          <BotanicalVineDivider variant="jasmine" maxWidth={860} />
+        <div className="my-8">
+          <BotanicalVineDivider variant="jasmine" maxWidth={580} />
         </div>
 
         {/* Methodology & Scientific Standards Reference Drawer / Card */}
