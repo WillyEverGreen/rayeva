@@ -65,7 +65,7 @@ export default function Navbar() {
   const NAV_LINKS = [
     { label: 'Collections', target: '#categories' },
     { label: 'Circularity', target: '#impact' },
-    { label: 'AI Calculator', target: '#calculator' },
+    { label: 'Calculator',  target: '#calculator' },
     { label: 'Standards',   target: '#brand-criteria' },
     { label: 'Impact',      target: '#sustainability-tree' },
     { label: 'About Us',    target: '#about' },

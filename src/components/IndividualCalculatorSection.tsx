@@ -52,15 +52,15 @@ export default function IndividualCalculatorSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
           <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#187E91] uppercase mb-3 bg-[#E3EFE7] px-3.5 py-1.5 rounded-full">
             <Sparkles size={13} className="stroke-[2.5]" />
-            <span>Carbon Footprint Calculator</span>
+            <span>Rayeva Sustainability Intelligence • Module 02</span>
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal tracking-tight text-slate-900 leading-[1.12] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-stone-900 tracking-tight leading-[1.12] mb-4">
             Your Personal{' '}
-            <span className="italic font-serif text-[#187E91]">Climate Impact</span>
+            <span className="italic text-[#187E91]">Climate Impact</span>
           </h2>
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
