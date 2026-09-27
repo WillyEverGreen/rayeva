@@ -336,14 +336,14 @@ export default function TrendingProductsSection() {
         <div className="relative w-full">
           <div
             ref={trackRef}
-            className="flex items-stretch gap-4 sm:gap-6 sm:gap-7 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory touch-pan-x pb-6 pt-2 px-4 sm:px-1"
+            className="flex items-stretch gap-4 sm:gap-6 sm:gap-7 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory overscroll-x-contain pb-6 pt-2 px-4 sm:px-1"
           >
             {filteredProducts.map((prod) => {
               const isAdded = !!addedIds[prod.id];
               return (
                 <div
                   key={prod.id}
-                  className="product-card-anim shrink-0 snap-center w-[84vw] max-w-[320px] sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_-10px_rgba(24,126,145,0.18)] transition-all duration-400 hover:-translate-y-1.5 flex flex-col justify-between"
+                  className="product-card-anim shrink-0 snap-center w-[76vw] max-w-[285px] sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_-10px_rgba(24,126,145,0.18)] transition-all duration-400 hover:-translate-y-1.5 flex flex-col justify-between"
                 >
                   {/* Photo with high contrast & accurate product image */}
                   <div className="relative aspect-[16/11] overflow-hidden bg-stone-100">

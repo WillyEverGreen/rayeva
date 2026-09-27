@@ -205,7 +205,7 @@ export default function CategoriesSection() {
     <section
       ref={containerRef}
       id="categories"
-      className="relative w-full bg-[#FAF8F3] py-14 sm:py-20 lg:py-24 overflow-hidden border-t border-stone-200/50"
+      className="relative w-full bg-[#FAF8F3] py-10 sm:py-16 lg:py-24 overflow-hidden border-t border-stone-200/50"
     >
       {/* ----------------- BOTANICAL LEAF ACCENTS & DRIFTING FOLIAGE ----------------- */}
       <DriftingBotanicals includePetals={true} />

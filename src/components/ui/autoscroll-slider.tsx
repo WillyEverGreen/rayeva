@@ -159,8 +159,8 @@ export function AutoScrollSlider({
               onMouseEnter={() => setHoveredId(slide.id)}
               onMouseLeave={() => setHoveredId(null)}
               className={cn(
-                "group relative shrink-0 w-[84vw] max-w-[320px] sm:max-w-none sm:w-[380px] md:w-[420px] lg:w-[450px] h-[430px] sm:h-[480px]",
-                "rounded-[28px] overflow-hidden bg-stone-900 border border-stone-200/70 shadow-md",
+                "group relative shrink-0 w-[76vw] max-w-[290px] sm:max-w-none sm:w-[380px] md:w-[420px] lg:w-[450px] h-[360px] xs:h-[390px] sm:h-[460px] md:h-[480px]",
+                "rounded-[24px] sm:rounded-[28px] overflow-hidden bg-stone-900 border border-stone-200/70 shadow-md",
                 "transition-all duration-400 ease-out hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer will-change-transform",
                 itemClassName
               )}
@@ -194,22 +194,23 @@ export function AutoScrollSlider({
                 )}
               />
 
-              {/* Top-Left Frosted Glass Category Icon Badge */}
-              {slide.icon && (
-                <div className="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-white/95 backdrop-blur-md text-stone-900 flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
-                  {slide.icon}
-                </div>
-              )}
+              {/* Top Header Row: Icon & Category Badge in unified Flex (never overlaps) */}
+              <div className="absolute top-3.5 sm:top-4 inset-x-3.5 sm:inset-x-4 z-20 flex items-center justify-between gap-2 pointer-events-none">
+                {slide.icon && (
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 backdrop-blur-md text-stone-900 flex items-center justify-center shadow-md shrink-0 transition-transform duration-300 group-hover:scale-105">
+                    {slide.icon}
+                  </div>
+                )}
 
-              {/* Top-Right Category Badge */}
-              {slide.categoryBadge && (
-                <div className="absolute top-4 right-4 z-20 px-3.5 py-1 rounded-full bg-black/65 backdrop-blur-md text-white/95 text-[11px] font-semibold tracking-wider border border-white/15 shadow-xs">
-                  {slide.categoryBadge}
-                </div>
-              )}
+                {slide.categoryBadge && (
+                  <div className="px-2.5 sm:px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white/95 text-[10px] sm:text-[11px] font-semibold tracking-wider border border-white/15 shadow-xs truncate max-w-[calc(100%-42px)]">
+                    {slide.categoryBadge}
+                  </div>
+                )}
+              </div>
 
               {/* Bottom Editorial Content Tray */}
-              <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6 flex flex-col justify-end">
+              <div className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-6 flex flex-col justify-end">
                 {/* Sector Category Eyebrow */}
                 <div className="flex items-center gap-1.5 text-[11px] uppercase font-bold tracking-widest text-emerald-400 mb-1">
                   <Sparkles size={12} className="stroke-[2.5]" />

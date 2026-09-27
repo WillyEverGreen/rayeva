@@ -513,32 +513,12 @@ export default function StarterKitAndPartners() {
                 Every enterprise on Rayeva adheres to rigorous laboratory audits, closed-loop packaging mandates, and fair artisan livelihoods.
               </p>
             </div>
-
-            {/* Header Arrow Controls - Accessible, responsive, never overlaps card text */}
-            <div className="flex items-center gap-2 self-start sm:self-end shrink-0">
-              <button
-                type="button"
-                onClick={() => nudgeSlider('left')}
-                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
-                aria-label="Previous Partner"
-              >
-                <ChevronLeft size={18} className="stroke-[2.5]" />
-              </button>
-              <button
-                type="button"
-                onClick={() => nudgeSlider('right')}
-                className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
-                aria-label="Next Partner"
-              >
-                <ChevronRight size={18} className="stroke-[2.5]" />
-              </button>
-            </div>
           </div>
 
-          {/* Mobile User-Draggable & Desktop Carousel */}
+          {/* Mobile User-Draggable & Desktop Carousel (smooth overscroll without vertical trapping) */}
           <div
             ref={sliderScrollContainerRef}
-            className="relative w-full overflow-x-auto md:overflow-hidden py-4 -my-4 group/slider no-scrollbar scroll-smooth snap-x snap-mandatory touch-pan-x"
+            className="relative w-full overflow-x-auto md:overflow-hidden py-3 -my-3 group/slider no-scrollbar scroll-smooth snap-x snap-mandatory overscroll-x-contain"
             onMouseEnter={handleSliderMouseEnter}
             onMouseLeave={handleSliderMouseLeave}
             onTouchStart={handleSliderMouseEnter}
@@ -556,16 +536,16 @@ export default function StarterKitAndPartners() {
               {[...PARTNERS, ...PARTNERS].map((brand, idx) => (
                 <div
                   key={`${brand.name}-${idx}`}
-                  className="w-[84vw] max-w-[320px] sm:w-[350px] md:w-[380px] shrink-0 snap-center bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
+                  className="w-[76vw] max-w-[285px] sm:w-[350px] md:w-[380px] shrink-0 snap-center bg-white rounded-2xl sm:rounded-3xl p-4.5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
                 >
                   <div>
                     {/* Standout Brand Logo Showcase Header - Clean Pure Surface */}
-                    <div className="relative mb-3.5 sm:mb-5 h-20 sm:h-24 rounded-xl sm:rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center px-4 sm:px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
+                    <div className="relative mb-3 sm:mb-5 h-16 sm:h-22 rounded-xl sm:rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center px-4 sm:px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
                       {/* Brand Logo Graphic - Tightly Cropped, High-Res, Transparent */}
                       <img
                         src={brand.logo}
                         alt={`${brand.name} logo`}
-                        className="relative z-10 max-h-10 sm:max-h-12 max-w-[170px] sm:max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+                        className="relative z-10 max-h-9 sm:max-h-12 max-w-[150px] sm:max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
                         loading="lazy"
                         draggable={false}
                         onError={(e) => {
@@ -651,6 +631,29 @@ export default function StarterKitAndPartners() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Centered Left / Right Arrow Controls Below Cards */}
+          <div className="mt-7 flex items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => nudgeSlider('left')}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
+              aria-label="Previous Partner"
+            >
+              <ChevronLeft size={18} className="stroke-[2.5]" />
+            </button>
+            <span className="text-xs font-semibold text-stone-500 font-mono tracking-wider px-2 select-none">
+              Explore Partners
+            </span>
+            <button
+              type="button"
+              onClick={() => nudgeSlider('right')}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 shadow-xs hover:shadow-md hover:border-[#187E91]/40 text-stone-700 hover:text-[#187E91] flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30"
+              aria-label="Next Partner"
+            >
+              <ChevronRight size={18} className="stroke-[2.5]" />
+            </button>
           </div>
         </div>
 

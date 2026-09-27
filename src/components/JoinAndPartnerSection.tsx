@@ -150,11 +150,6 @@ export default function JoinAndPartnerSection() {
           <BotanicalCornerSprig position="top-right" variant="sprig-1" className="opacity-80 scale-110" />
 
           <div className="max-w-xl">
-            <Badge variant="secondary" className="mb-4 px-4 py-1.5 text-xs sm:text-[13px] font-bold uppercase tracking-wider border border-[#244835]/20 shadow-xs inline-flex items-center gap-2.5">
-              <Sparkles size={18} className="text-[#187E91] stroke-[2.5]" />
-              <span>Rayeva Intelligence Dispatch</span>
-            </Badge>
-
             <h2 className="text-3xl sm:text-4xl font-serif font-normal text-stone-900 tracking-tight leading-tight">
               Stay At The Forefront Of <br />
               <span className="italic text-[#187E91]">Sustainable Living & Policy</span>
