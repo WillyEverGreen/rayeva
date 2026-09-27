@@ -38,15 +38,15 @@ export default function HeroContent() {
 
       {/* H1 Headline */}
       <h1 className="hero-anim-item font-serif font-medium tracking-tight text-slate-950 leading-[1.1] flex flex-col items-center gap-1 sm:gap-1.5 mb-3.5 sm:mb-5 select-none text-3xl xs:text-4xl sm:text-5xl md:text-[58px] lg:text-[64px]">
-        <span className="drop-shadow-[0_2px_4px_rgba(255,255,255,0.5)]">Breathe In Peace,</span>
+        <span className="drop-shadow-[0_2px_4px_rgba(255,255,255,0.5)]">The New Standard for</span>
         <span className="italic text-[#187E91] drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)] whitespace-normal sm:whitespace-nowrap">
-          Breathe Out The World
+          Sustainable Living
         </span>
       </h1>
 
       {/* Subtitle */}
       <p className="hero-anim-item text-slate-800 text-xs sm:text-[15px] max-w-xs sm:max-w-lg mx-auto leading-relaxed mb-5 sm:mb-7 font-normal select-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">
-        India's curated sustainable living platform, connecting mindful consumers and businesses with verified zero-waste solutions.
+        Empowering individuals and enterprises to eliminate plastic, reduce emissions, and close the loop.
       </p>
 
       {/* Email CTA */}
