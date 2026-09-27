@@ -76,7 +76,7 @@ export default function CategoriesSection() {
         title: 'Home & Living',
         description:
           'Create mindful spaces with sustainable decor, enzyme-based botanical cleaners, neem wood kitchenware, and organic linen bedding.',
-        image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/home-living.jpg',
         imageAlt: 'Home & Living artisanal ceramics and minimalist natural interior',
         categoryBadge: 'SECTOR 01 • MINDFUL SPACES',
         icon: <Home size={19} className="text-[#244835]" />,
@@ -90,7 +90,7 @@ export default function CategoriesSection() {
         title: 'Beauty & Personal Care',
         description:
           'Clean, plant-based products for mindful wellness, featuring cold-pressed botanical serums, waterless solid shampoo bars, and biodegradable organic hygiene.',
-        image: 'https://images.unsplash.com/photo-1608248597359-0524458d927a?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/beauty-care.jpg',
         imageAlt: 'Beauty & Personal Care botanical amber glass serums and clean skincare',
         categoryBadge: 'SECTOR 02 • BOTANICAL WELLNESS',
         icon: <Flower2 size={19} className="text-[#187E91]" />,
@@ -104,7 +104,7 @@ export default function CategoriesSection() {
         title: 'Zero Waste Everyday Essentials',
         description:
           'Everyday alternatives that eliminate single-use waste: reusable organic produce bags, stainless steel insulated bottles, and upcycled coconut shell bowls.',
-        image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/zero-waste.jpg',
         imageAlt: 'Zero Waste reusable organic market bags and circular essentials',
         categoryBadge: 'SECTOR 03 • ZERO WASTE',
         icon: <Recycle size={19} className="text-emerald-700" />,
@@ -118,7 +118,7 @@ export default function CategoriesSection() {
         title: 'Fashion, Accessories & Kids',
         description:
           'Thoughtful fashion for a kinder tomorrow, including durable plant leather totes, upcycled ocean-plastic fanny packs, and chemical-free organic kids apparel.',
-        image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/conscious-fashion.jpg',
         imageAlt: 'Conscious Fashion ethical organic textiles and natural earth tones',
         categoryBadge: 'SECTOR 04 • CIRCULAR APPAREL',
         icon: <Shirt size={19} className="text-amber-700" />,
@@ -132,7 +132,7 @@ export default function CategoriesSection() {
         title: 'Food and Wellness',
         description:
           'Organic groceries, ancient grain millets, cold-pressed indigenous cooking oils, and artisanal restorative superfoods direct from verified ethical growers.',
-        image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/organic-food.jpg',
         imageAlt: 'Food & Wellness wholesome organic superfoods and indigenous grains',
         categoryBadge: 'SECTOR 05 • REGENERATIVE FOOD',
         icon: <Sparkles size={19} className="text-teal-700" />,
@@ -146,7 +146,7 @@ export default function CategoriesSection() {
         title: 'Conscious Gifting',
         description:
           'Meaningful celebration hampers and artisan packages, featuring handcrafted brass keepsakes, plantable seed-paper stationery, and zero-plastic festive boxes.',
-        image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/eco-gifting.jpg',
         imageAlt: 'Conscious Gifting artisanal celebration parcel with natural twine and botanicals',
         categoryBadge: 'SECTOR 06 • ARTISANAL CELEBRATION',
         icon: <Gift size={19} className="text-rose-700" />,
@@ -160,7 +160,7 @@ export default function CategoriesSection() {
         title: 'Clean Tech',
         description:
           'Sustainable electronics engineered for energy efficiency and longevity, including portable solar micro-chargers, bamboo tech accessories, and modular air purifiers.',
-        image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/clean-tech.jpg',
         imageAlt: 'Clean Tech energy-efficient workspace and modular eco-hardware',
         categoryBadge: 'SECTOR 07 • CIRCULAR HARDWARE',
         icon: <Cpu size={19} className="text-cyan-700" />,
@@ -174,7 +174,7 @@ export default function CategoriesSection() {
         title: 'Sustainable Packaging',
         description:
           'Eco-friendly protective mailers, circular corrugated cartons, compostable cornstarch bags, and water-activated paper tape engineered to protect goods and soil.',
-        image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/sustainable-packaging.jpg',
         imageAlt: 'Sustainable Packaging recycled corrugated cartons and protective kraft paper',
         categoryBadge: 'SECTOR 08 • CIRCULAR DISPATCH',
         icon: <Package size={19} className="text-stone-700" />,
@@ -188,7 +188,7 @@ export default function CategoriesSection() {
         title: 'Sustainable Materials and Impact Solutions',
         description:
           'B2B regenerative building blocks: upcycled industrial composite tiles, agricultural stubble bio-boards, and mycelium acoustic insulation for circular enterprises.',
-        image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/sectors/water-systems.jpg',
         imageAlt: 'Sustainable Materials circular raw boards and textured architectural samples',
         categoryBadge: 'SECTOR 09 • ENTERPRISE ESG',
         icon: <Layers size={19} className="text-indigo-700" />,

@@ -105,7 +105,7 @@ export default function AboutSection() {
             {/* Main large image */}
             <div className="about-img absolute top-0 left-0 right-[15%] h-[65%] rounded-[24px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.14)]">
               <img
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=75"
+                src="/images/about/sustainable-sourcing.jpg"
                 alt="Sustainable sourcing in India"
                 className="w-full h-full object-cover"
               />
@@ -113,7 +113,7 @@ export default function AboutSection() {
             {/* Bottom-left image */}
             <div className="about-img absolute bottom-0 left-0 w-[46%] h-[38%] rounded-[20px] overflow-hidden shadow-[0_6px_24px_rgba(0,0,0,0.12)] ring-4 ring-[#F3EFE6]" style={{ transform: 'rotate(-2deg)' }}>
               <img
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=75"
+                src="/images/about/artisan-craftsman.jpg"
                 alt="Artisan craftsman"
                 className="w-full h-full object-cover"
               />
@@ -121,7 +121,7 @@ export default function AboutSection() {
             {/* Bottom-right image */}
             <div className="about-img absolute bottom-0 right-0 w-[46%] h-[38%] rounded-[20px] overflow-hidden shadow-[0_6px_24px_rgba(0,0,0,0.12)] ring-4 ring-[#F3EFE6]" style={{ transform: 'rotate(1.5deg)' }}>
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=75"
+                src="/images/about/sustainability-team.jpg"
                 alt="Corporate sustainability session"
                 className="w-full h-full object-cover"
               />
