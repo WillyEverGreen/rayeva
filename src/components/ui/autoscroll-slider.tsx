@@ -142,14 +142,14 @@ export function AutoScrollSlider({
       plugins={[
         AutoScroll({
           speed,
-          stopOnInteraction: false,
+          stopOnInteraction: true,
           stopOnMouseEnter,
           startDelay: 120,
         }),
       ]}
       className={cn("w-full mx-auto select-none", className)}
     >
-      <SliderContainer className="gap-6 py-4">
+      <SliderContainer className="gap-4 sm:gap-6 py-4 px-2 sm:px-0">
         {slides.map((slide, idx) => {
           const isHovered = hoveredId === slide.id;
 
@@ -159,7 +159,7 @@ export function AutoScrollSlider({
               onMouseEnter={() => setHoveredId(slide.id)}
               onMouseLeave={() => setHoveredId(null)}
               className={cn(
-                "group relative shrink-0 w-[84vw] sm:w-[380px] md:w-[420px] lg:w-[450px] h-[440px] sm:h-[480px]",
+                "group relative shrink-0 w-[84vw] max-w-[320px] sm:max-w-none sm:w-[380px] md:w-[420px] lg:w-[450px] h-[430px] sm:h-[480px]",
                 "rounded-[28px] overflow-hidden bg-stone-900 border border-stone-200/70 shadow-md",
                 "transition-all duration-400 ease-out hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer will-change-transform",
                 itemClassName

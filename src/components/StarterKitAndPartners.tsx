@@ -214,6 +214,7 @@ export default function StarterKitAndPartners() {
   const containerRef = useRef<HTMLElement>(null);
   const kitRef = useRef<HTMLDivElement>(null);
   const partnersRef = useRef<HTMLDivElement>(null);
+  const sliderScrollContainerRef = useRef<HTMLDivElement>(null);
   const sliderTrackRef = useRef<HTMLDivElement>(null);
   const sliderTweenRef = useRef<gsap.core.Tween | null>(null);
   const { navigate } = usePageTransition();
@@ -229,12 +230,19 @@ export default function StarterKitAndPartners() {
   const bundledPrice = Math.round(rawTotal * 0.88); // 12% curated bundle privilege
   const savings = rawTotal - bundledPrice;
 
-  // Infinite slider GSAP animation
+  // Infinite slider GSAP animation on desktop, full user touch-drag on mobile
   useEffect(() => {
     const track = sliderTrackRef.current;
     if (!track) return;
 
-    // Smooth linear infinite scroll of duplicated partners list
+    // Check if on mobile / small screen (< 768px)
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    if (isMobile) {
+      // Allow pure user drag & touch swipe on mobile without GSAP interference
+      return;
+    }
+
+    // Smooth linear infinite scroll of duplicated partners list on desktop
     sliderTweenRef.current = gsap.to(track, {
       xPercent: -50,
       duration: 55,
@@ -256,6 +264,13 @@ export default function StarterKitAndPartners() {
   };
 
   const nudgeSlider = (direction: 'left' | 'right') => {
+    // If mobile screen, scroll the container smoothly with user control
+    if (sliderScrollContainerRef.current && (typeof window !== 'undefined' && window.innerWidth < 768)) {
+      const scrollStep = direction === 'left' ? -310 : 310;
+      sliderScrollContainerRef.current.scrollBy({ left: scrollStep, behavior: 'smooth' });
+      return;
+    }
+
     if (!sliderTweenRef.current) return;
     const current = sliderTweenRef.current.time();
     const total = sliderTweenRef.current.duration();
@@ -520,27 +535,28 @@ export default function StarterKitAndPartners() {
             </div>
           </div>
 
-          {/* Infinite Seamless Slider with Edge Vignettes */}
+          {/* Mobile User-Draggable & Desktop Carousel */}
           <div
-            className="relative w-full overflow-hidden py-4 -my-4 group/slider"
+            ref={sliderScrollContainerRef}
+            className="relative w-full overflow-x-auto md:overflow-hidden py-4 -my-4 group/slider no-scrollbar scroll-smooth snap-x snap-mandatory touch-pan-x"
             onMouseEnter={handleSliderMouseEnter}
             onMouseLeave={handleSliderMouseLeave}
             onTouchStart={handleSliderMouseEnter}
             onTouchEnd={handleSliderMouseLeave}
           >
-            {/* Left & Right Soft Fade Masks (narrow on mobile to preserve card view) */}
-            <div className="absolute left-0 top-0 bottom-0 w-4 sm:w-16 md:w-24 bg-gradient-to-r from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-4 sm:w-16 md:w-24 bg-gradient-to-l from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
+            {/* Left & Right Soft Fade Masks (hidden on mobile so cards are never cut off) */}
+            <div className="hidden md:block absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
+            <div className="hidden md:block absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-[#FAF8F3] via-[#FAF8F3]/90 to-transparent z-20 pointer-events-none" />
 
-            {/* Seamless Infinite Gliding Track */}
+            {/* Seamless Infinite / Draggable Track */}
             <div
               ref={sliderTrackRef}
-              className="flex gap-4 sm:gap-6 w-max select-none will-change-transform px-1"
+              className="flex gap-4 sm:gap-6 w-max select-none will-change-transform px-4 sm:px-6 md:px-1"
             >
               {[...PARTNERS, ...PARTNERS].map((brand, idx) => (
                 <div
                   key={`${brand.name}-${idx}`}
-                  className="w-[280px] xs:w-[320px] sm:w-[360px] md:w-[380px] shrink-0 bg-white rounded-2xl sm:rounded-3xl p-4.5 xs:p-5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
+                  className="w-[84vw] max-w-[320px] sm:w-[350px] md:w-[380px] shrink-0 snap-center bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
                 >
                   <div>
                     {/* Standout Brand Logo Showcase Header - Clean Pure Surface */}
