@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <!-- Text Circular Path -->
+    <path id="sealCircle" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0" />
+    <linearGradient id="sealTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#187E91" />
+      <stop offset="100%" stop-color="#244835" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Dashed Ring -->
+  <circle cx="80" cy="80" r="74" stroke="#187E91" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" />
+  
+  <!-- Outer Fine Solid Border -->
+  <circle cx="80" cy="80" r="68" stroke="#244835" stroke-width="1" opacity="0.3" />
+
+  <!-- Circular Text around path -->
+  <text font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="9" font-weight="700" fill="#244835" letter-spacing="2.8">
+    <textPath href="#sealCircle" startOffset="0%">
+      VERIFIED SUSTAINABLE • 100% ETHICAL • RAYEVA STANDARD •
+    </textPath>
+  </text>
+
+  <!-- Inner Badge Circle -->
+  <circle cx="80" cy="80" r="42" fill="#E3EFE7" stroke="#244835" stroke-width="1.5" />
+
+  <!-- Center Emblem: Eco Leaf & Star -->
+  <g transform="translate(80, 80) scale(0.65) translate(-40, -42)">
+    <path d="M40 70 C40 50 40 30 40 18" stroke="#244835" stroke-width="3" stroke-linecap="round" />
+    <path d="M40 46 C24 38 12 40 8 52 C22 58 34 52 40 46 Z" fill="#187E91" stroke="#244835" stroke-width="2.5" />
+    <path d="M40 34 C56 26 68 28 72 40 C58 46 46 40 40 34 Z" fill="#244835" stroke="#244835" stroke-width="2.5" />
+  </g>
+</svg>

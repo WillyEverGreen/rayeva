@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Arching Olive Sprig -->
+  <path d="M20 120 C45 105 85 75 120 20" stroke="#244835" stroke-width="2" />
+  <!-- Olive Leaves -->
+  <!-- Pair 1 -->
+  <path d="M42 105 C30 96 24 80 32 76 C40 78 48 94 42 105 Z" fill="#E3EFE7" stroke="#244835" stroke-width="1.5" />
+  <path d="M50 100 C62 90 78 84 80 92 C74 100 58 104 50 100 Z" fill="#E3EFE7" stroke="#244835" stroke-width="1.5" />
+  <!-- Pair 2 -->
+  <path d="M68 82 C55 72 48 56 56 52 C64 54 74 70 68 82 Z" fill="#D4E7DC" stroke="#244835" stroke-width="1.5" />
+  <path d="M76 76 C88 65 104 58 106 66 C100 74 84 80 76 76 Z" fill="#D4E7DC" stroke="#244835" stroke-width="1.5" />
+  <!-- Pair 3 -->
+  <path d="M94 54 C82 44 76 28 84 24 C92 26 100 42 94 54 Z" fill="#E3EFE7" stroke="#244835" stroke-width="1.5" />
+  <path d="M102 48 C114 36 128 28 130 36 C124 44 110 52 102 48 Z" fill="#E3EFE7" stroke="#244835" stroke-width="1.5" />
+  <!-- Tip Leaf -->
+  <path d="M120 20 C125 10 135 5 136 12 C132 18 124 22 120 20 Z" fill="#244835" stroke="#244835" stroke-width="1.5" />
+  <!-- Natural Olives (Berries) -->
+  <ellipse cx="60" cy="94" rx="5" ry="7" transform="rotate(20 60 94)" fill="#187E91" stroke="#244835" stroke-width="1" />
+  <ellipse cx="88" cy="70" rx="5" ry="7" transform="rotate(-15 88 70)" fill="#187E91" stroke="#244835" stroke-width="1" />
+</svg>

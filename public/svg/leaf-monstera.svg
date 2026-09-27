@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Monstera Stem -->
+  <path d="M70 155 C70 135 68 110 68 70" stroke="#244835" stroke-width="2.5" />
+  <!-- Monstera Iconic Fenestrated Leaf Body -->
+  <path d="M70 115 
+    C48 115 28 98 22 75 
+    C20 68 28 66 32 72 
+    C36 78 44 80 50 74 
+    C32 60 22 46 26 34 
+    C30 30 36 34 40 40 
+    C46 50 56 46 58 36 
+    C46 22 46 16 56 12 
+    C64 10 68 18 70 24 
+    C72 18 76 10 84 12 
+    C94 16 94 22 82 36 
+    C84 46 94 50 100 40 
+    C104 34 110 30 114 34 
+    C118 46 108 60 90 74 
+    C96 80 104 78 108 72 
+    C112 66 120 68 118 75 
+    C112 98 92 115 70 115 Z" 
+    fill="#E3EFE7" stroke="#244835" stroke-width="2" />
+  <!-- Central Vein -->
+  <path d="M70 115 C70 85 70 50 70 24" stroke="#244835" stroke-width="2" />
+  <!-- Fenestration Slits / Perforations -->
+  <ellipse cx="58" cy="62" rx="4" ry="10" transform="rotate(-30 58 62)" fill="#FAF8F3" stroke="#244835" stroke-width="1.2" />
+  <ellipse cx="82" cy="62" rx="4" ry="10" transform="rotate(30 82 62)" fill="#FAF8F3" stroke="#244835" stroke-width="1.2" />
+</svg>

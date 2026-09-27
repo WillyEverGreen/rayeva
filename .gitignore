@@ -1,0 +1,40 @@
+﻿# Dependencies
+node_modules/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Dev-only scripts and snapshots (not part of app)
+*.py
+*.cjs
+test-*.js
+test-*.cjs
+check_*.py
+snap_*.py
+capture_*.py
+
+# Screenshot artifacts from dev
+*.png
+*.jpg
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+
+# Vite cache
+.vite/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*

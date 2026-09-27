@@ -1,0 +1,1577 @@
+{
+  "categories": {
+    "landscapes": [
+      {
+        "name": "landscape_meadow_mountains",
+        "category": "landscapes",
+        "path": "landscapes/landscape_meadow_mountains.png",
+        "width": 744,
+        "height": 196
+      },
+      {
+        "name": "landscape_river_stream",
+        "category": "landscapes",
+        "path": "landscapes/landscape_river_stream.png",
+        "width": 754,
+        "height": 206
+      },
+      {
+        "name": "landscape_lake_hills",
+        "category": "landscapes",
+        "path": "landscapes/landscape_lake_hills.png",
+        "width": 746,
+        "height": 145
+      },
+      {
+        "name": "landscape_sunset_peaks",
+        "category": "landscapes",
+        "path": "landscapes/landscape_sunset_peaks.png",
+        "width": 746,
+        "height": 169
+      }
+    ],
+    "branches": [
+      {
+        "name": "branch_drooping_left",
+        "category": "branches",
+        "path": "branches/branch_drooping_left.png",
+        "width": 377,
+        "height": 247
+      },
+      {
+        "name": "branch_drooping_right",
+        "category": "branches",
+        "path": "branches/branch_drooping_right.png",
+        "width": 419,
+        "height": 277
+      }
+    ],
+    "dividers": [
+      {
+        "name": "mountain_silhouette_1_left",
+        "category": "dividers",
+        "path": "dividers/mountain_silhouette_1_left.png",
+        "width": 612,
+        "height": 65
+      },
+      {
+        "name": "mountain_silhouette_2_center_left",
+        "category": "dividers",
+        "path": "dividers/mountain_silhouette_2_center_left.png",
+        "width": 259,
+        "height": 61
+      },
+      {
+        "name": "mountain_silhouette_3_center_right",
+        "category": "dividers",
+        "path": "dividers/mountain_silhouette_3_center_right.png",
+        "width": 373,
+        "height": 59
+      },
+      {
+        "name": "mountain_silhouette_4_right",
+        "category": "dividers",
+        "path": "dividers/mountain_silhouette_4_right.png",
+        "width": 246,
+        "height": 72
+      },
+      {
+        "name": "vine_accent_leaf_left",
+        "category": "dividers",
+        "path": "dividers/vine_accent_leaf_left.png",
+        "width": 40,
+        "height": 46
+      },
+      {
+        "name": "vine_divider_daisy_left",
+        "category": "dividers",
+        "path": "dividers/vine_divider_daisy_left.png",
+        "width": 242,
+        "height": 44
+      },
+      {
+        "name": "vine_divider_center_complete",
+        "category": "dividers",
+        "path": "dividers/vine_divider_center_complete.png",
+        "width": 618,
+        "height": 52
+      },
+      {
+        "name": "vine_divider_leaves_right",
+        "category": "dividers",
+        "path": "dividers/vine_divider_leaves_right.png",
+        "width": 233,
+        "height": 37
+      },
+      {
+        "name": "vine_accent_leaf_right",
+        "category": "dividers",
+        "path": "dividers/vine_accent_leaf_right.png",
+        "width": 49,
+        "height": 42
+      }
+    ],
+    "categories": [
+      {
+        "name": "cat_home_and_living",
+        "category": "categories",
+        "path": "categories/cat_home_and_living.png",
+        "width": 207,
+        "height": 178
+      },
+      {
+        "name": "cat_home_and_living_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_home_and_living_illustration_only.png",
+        "width": 200,
+        "height": 133
+      },
+      {
+        "name": "cat_home_and_living_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_home_and_living_pill_button_only.png",
+        "width": 200,
+        "height": 39
+      },
+      {
+        "name": "cat_beauty_and_personal_care",
+        "category": "categories",
+        "path": "categories/cat_beauty_and_personal_care.png",
+        "width": 195,
+        "height": 154
+      },
+      {
+        "name": "cat_beauty_and_personal_care_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_beauty_and_personal_care_illustration_only.png",
+        "width": 189,
+        "height": 109
+      },
+      {
+        "name": "cat_beauty_and_personal_care_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_beauty_and_personal_care_pill_button_only.png",
+        "width": 183,
+        "height": 39
+      },
+      {
+        "name": "cat_zero_waste_essentials",
+        "category": "categories",
+        "path": "categories/cat_zero_waste_essentials.png",
+        "width": 221,
+        "height": 160
+      },
+      {
+        "name": "cat_zero_waste_essentials_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_zero_waste_essentials_illustration_only.png",
+        "width": 215,
+        "height": 115
+      },
+      {
+        "name": "cat_zero_waste_essentials_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_zero_waste_essentials_pill_button_only.png",
+        "width": 186,
+        "height": 39
+      },
+      {
+        "name": "cat_fashion_and_kids",
+        "category": "categories",
+        "path": "categories/cat_fashion_and_kids.png",
+        "width": 213,
+        "height": 154
+      },
+      {
+        "name": "cat_fashion_and_kids_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_fashion_and_kids_illustration_only.png",
+        "width": 207,
+        "height": 109
+      },
+      {
+        "name": "cat_fashion_and_kids_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_fashion_and_kids_pill_button_only.png",
+        "width": 202,
+        "height": 39
+      },
+      {
+        "name": "cat_conscious_gifting",
+        "category": "categories",
+        "path": "categories/cat_conscious_gifting.png",
+        "width": 203,
+        "height": 151
+      },
+      {
+        "name": "cat_conscious_gifting_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_conscious_gifting_illustration_only.png",
+        "width": 197,
+        "height": 106
+      },
+      {
+        "name": "cat_conscious_gifting_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_conscious_gifting_pill_button_only.png",
+        "width": 166,
+        "height": 39
+      },
+      {
+        "name": "cat_sustainable_packaging",
+        "category": "categories",
+        "path": "categories/cat_sustainable_packaging.png",
+        "width": 210,
+        "height": 160
+      },
+      {
+        "name": "cat_sustainable_packaging_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_sustainable_packaging_illustration_only.png",
+        "width": 204,
+        "height": 114
+      },
+      {
+        "name": "cat_sustainable_packaging_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_sustainable_packaging_pill_button_only.png",
+        "width": 177,
+        "height": 40
+      },
+      {
+        "name": "cat_clean_tech",
+        "category": "categories",
+        "path": "categories/cat_clean_tech.png",
+        "width": 204,
+        "height": 147
+      },
+      {
+        "name": "cat_clean_tech_illustration_only",
+        "category": "categories",
+        "path": "categories/cat_clean_tech_illustration_only.png",
+        "width": 198,
+        "height": 102
+      },
+      {
+        "name": "cat_clean_tech_pill_button_only",
+        "category": "categories",
+        "path": "categories/cat_clean_tech_pill_button_only.png",
+        "width": 192,
+        "height": 39
+      }
+    ],
+    "circularity": [
+      {
+        "name": "circularity_01_choose",
+        "category": "circularity",
+        "path": "circularity/circularity_01_choose.png",
+        "width": 128,
+        "height": 149
+      },
+      {
+        "name": "circularity_01_choose_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_01_choose_badge_only.png",
+        "width": 128,
+        "height": 121
+      },
+      {
+        "name": "circularity_01_choose_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_01_choose_label_only.png",
+        "width": 54,
+        "height": 17
+      },
+      {
+        "name": "circularity_02_use",
+        "category": "circularity",
+        "path": "circularity/circularity_02_use.png",
+        "width": 127,
+        "height": 147
+      },
+      {
+        "name": "circularity_02_use_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_02_use_badge_only.png",
+        "width": 127,
+        "height": 118
+      },
+      {
+        "name": "circularity_02_use_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_02_use_label_only.png",
+        "width": 29,
+        "height": 16
+      },
+      {
+        "name": "circularity_03_reuse",
+        "category": "circularity",
+        "path": "circularity/circularity_03_reuse.png",
+        "width": 127,
+        "height": 148
+      },
+      {
+        "name": "circularity_03_reuse_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_03_reuse_badge_only.png",
+        "width": 127,
+        "height": 117
+      },
+      {
+        "name": "circularity_03_reuse_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_03_reuse_label_only.png",
+        "width": 44,
+        "height": 16
+      },
+      {
+        "name": "circularity_04_return",
+        "category": "circularity",
+        "path": "circularity/circularity_04_return.png",
+        "width": 132,
+        "height": 147
+      },
+      {
+        "name": "circularity_04_return_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_04_return_badge_only.png",
+        "width": 132,
+        "height": 124
+      },
+      {
+        "name": "circularity_04_return_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_04_return_label_only.png",
+        "width": 52,
+        "height": 16
+      },
+      {
+        "name": "circularity_05_regenerate",
+        "category": "circularity",
+        "path": "circularity/circularity_05_regenerate.png",
+        "width": 147,
+        "height": 152
+      },
+      {
+        "name": "circularity_05_regenerate_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_05_regenerate_badge_only.png",
+        "width": 147,
+        "height": 121
+      },
+      {
+        "name": "circularity_05_regenerate_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_05_regenerate_label_only.png",
+        "width": 81,
+        "height": 21
+      },
+      {
+        "name": "circularity_06_greater_impact",
+        "category": "circularity",
+        "path": "circularity/circularity_06_greater_impact.png",
+        "width": 143,
+        "height": 160
+      },
+      {
+        "name": "circularity_06_greater_impact_badge_only",
+        "category": "circularity",
+        "path": "circularity/circularity_06_greater_impact_badge_only.png",
+        "width": 143,
+        "height": 135
+      },
+      {
+        "name": "circularity_06_greater_impact_label_only",
+        "category": "circularity",
+        "path": "circularity/circularity_06_greater_impact_label_only.png",
+        "width": 109,
+        "height": 21
+      }
+    ],
+    "eco_seals": [
+      {
+        "name": "seal_sustainable",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_sustainable.png",
+        "width": 56,
+        "height": 69
+      },
+      {
+        "name": "icon_sustainable",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_sustainable.png",
+        "width": 56,
+        "height": 54
+      },
+      {
+        "name": "seal_recycled",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_recycled.png",
+        "width": 56,
+        "height": 70
+      },
+      {
+        "name": "icon_recycled",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_recycled.png",
+        "width": 56,
+        "height": 55
+      },
+      {
+        "name": "seal_organic",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_organic.png",
+        "width": 57,
+        "height": 70
+      },
+      {
+        "name": "icon_organic",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_organic.png",
+        "width": 57,
+        "height": 54
+      },
+      {
+        "name": "seal_plastic_free",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_plastic_free.png",
+        "width": 57,
+        "height": 69
+      },
+      {
+        "name": "icon_plastic_free",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_plastic_free.png",
+        "width": 57,
+        "height": 55
+      },
+      {
+        "name": "seal_handmade",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_handmade.png",
+        "width": 57,
+        "height": 69
+      },
+      {
+        "name": "icon_handmade",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_handmade.png",
+        "width": 57,
+        "height": 55
+      },
+      {
+        "name": "seal_locally_made",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_locally_made.png",
+        "width": 63,
+        "height": 70
+      },
+      {
+        "name": "icon_locally_made",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_locally_made.png",
+        "width": 56,
+        "height": 54
+      },
+      {
+        "name": "seal_biodegradable",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_biodegradable.png",
+        "width": 68,
+        "height": 73
+      },
+      {
+        "name": "icon_biodegradable",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_biodegradable.png",
+        "width": 57,
+        "height": 56
+      },
+      {
+        "name": "seal_ethical",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_ethical.png",
+        "width": 56,
+        "height": 71
+      },
+      {
+        "name": "icon_ethical",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_ethical.png",
+        "width": 56,
+        "height": 55
+      },
+      {
+        "name": "seal_low_waste",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_low_waste.png",
+        "width": 57,
+        "height": 71
+      },
+      {
+        "name": "icon_low_waste",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_low_waste.png",
+        "width": 57,
+        "height": 56
+      },
+      {
+        "name": "seal_cruelty_free",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_cruelty_free.png",
+        "width": 59,
+        "height": 73
+      },
+      {
+        "name": "icon_cruelty_free",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_cruelty_free.png",
+        "width": 57,
+        "height": 56
+      },
+      {
+        "name": "seal_vegan",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_vegan.png",
+        "width": 57,
+        "height": 73
+      },
+      {
+        "name": "icon_vegan",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_vegan.png",
+        "width": 57,
+        "height": 56
+      },
+      {
+        "name": "seal_circular",
+        "category": "eco_seals",
+        "path": "eco_seals/seal_circular.png",
+        "width": 56,
+        "height": 71
+      },
+      {
+        "name": "icon_circular",
+        "category": "eco_seals",
+        "path": "eco_seals/icon_circular.png",
+        "width": 56,
+        "height": 56
+      }
+    ],
+    "florals": [
+      {
+        "name": "daisy_cluster_left",
+        "category": "florals",
+        "path": "florals/daisy_cluster_left.png",
+        "width": 107,
+        "height": 85
+      },
+      {
+        "name": "meadow_wildflowers_bouquet",
+        "category": "florals",
+        "path": "florals/meadow_wildflowers_bouquet.png",
+        "width": 169,
+        "height": 119
+      },
+      {
+        "name": "daisy_bouquet_center",
+        "category": "florals",
+        "path": "florals/daisy_bouquet_center.png",
+        "width": 133,
+        "height": 129
+      },
+      {
+        "name": "yellow_wildflower_stalk",
+        "category": "florals",
+        "path": "florals/yellow_wildflower_stalk.png",
+        "width": 58,
+        "height": 98
+      },
+      {
+        "name": "yellow_wildflowers_bouquet",
+        "category": "florals",
+        "path": "florals/yellow_wildflowers_bouquet.png",
+        "width": 88,
+        "height": 74
+      },
+      {
+        "name": "daisies_with_stones_patch",
+        "category": "florals",
+        "path": "florals/daisies_with_stones_patch.png",
+        "width": 117,
+        "height": 118
+      },
+      {
+        "name": "single_daisy_blossom",
+        "category": "florals",
+        "path": "florals/single_daisy_blossom.png",
+        "width": 97,
+        "height": 73
+      },
+      {
+        "name": "yellow_blossoms_cluster",
+        "category": "florals",
+        "path": "florals/yellow_blossoms_cluster.png",
+        "width": 133,
+        "height": 87
+      },
+      {
+        "name": "floral_cluster_9",
+        "category": "florals",
+        "path": "florals/floral_cluster_9.png",
+        "width": 51,
+        "height": 57
+      },
+      {
+        "name": "daisy_blossom_accent",
+        "category": "florals",
+        "path": "florals/daisy_blossom_accent.png",
+        "width": 54,
+        "height": 51
+      }
+    ],
+    "leaves": [
+      {
+        "name": "leaf_top_center_sprout_1",
+        "category": "leaves",
+        "path": "leaves/leaf_top_center_sprout_1.png",
+        "width": 21,
+        "height": 26
+      },
+      {
+        "name": "leaf_top_center_sprout_2",
+        "category": "leaves",
+        "path": "leaves/leaf_top_center_sprout_2.png",
+        "width": 18,
+        "height": 22
+      },
+      {
+        "name": "leaf_top_meadow_floating",
+        "category": "leaves",
+        "path": "leaves/leaf_top_meadow_floating.png",
+        "width": 48,
+        "height": 37
+      },
+      {
+        "name": "leaf_top_sky_drifting_1",
+        "category": "leaves",
+        "path": "leaves/leaf_top_sky_drifting_1.png",
+        "width": 17,
+        "height": 36
+      },
+      {
+        "name": "leaf_top_sky_drifting_2",
+        "category": "leaves",
+        "path": "leaves/leaf_top_sky_drifting_2.png",
+        "width": 20,
+        "height": 31
+      },
+      {
+        "name": "leaf_top_sky_drifting_3",
+        "category": "leaves",
+        "path": "leaves/leaf_top_sky_drifting_3.png",
+        "width": 36,
+        "height": 30
+      },
+      {
+        "name": "leaf_top_sunset_floating",
+        "category": "leaves",
+        "path": "leaves/leaf_top_sunset_floating.png",
+        "width": 37,
+        "height": 35
+      },
+      {
+        "name": "leaf_mid_curved_large",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_curved_large.png",
+        "width": 117,
+        "height": 66
+      },
+      {
+        "name": "leaf_mid_small_tilted",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_small_tilted.png",
+        "width": 51,
+        "height": 49
+      },
+      {
+        "name": "leaf_mid_upright_pointed",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_upright_pointed.png",
+        "width": 95,
+        "height": 80
+      },
+      {
+        "name": "leaf_mid_pointed_right",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_pointed_right.png",
+        "width": 122,
+        "height": 69
+      },
+      {
+        "name": "leaf_mid_wide_tilted",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_wide_tilted.png",
+        "width": 97,
+        "height": 67
+      },
+      {
+        "name": "leaf_mid_sprig_small_1",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_sprig_small_1.png",
+        "width": 54,
+        "height": 47
+      },
+      {
+        "name": "leaf_mid_vertical_slender",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_vertical_slender.png",
+        "width": 38,
+        "height": 68
+      },
+      {
+        "name": "leaf_mid_angled_down",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_angled_down.png",
+        "width": 99,
+        "height": 75
+      },
+      {
+        "name": "leaf_mid_sprig_branchlet",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_sprig_branchlet.png",
+        "width": 123,
+        "height": 96
+      },
+      {
+        "name": "leaf_mid_sprig_small_2",
+        "category": "leaves",
+        "path": "leaves/leaf_mid_sprig_small_2.png",
+        "width": 20,
+        "height": 44
+      },
+      {
+        "name": "leaf_under_left_branch",
+        "category": "leaves",
+        "path": "leaves/leaf_under_left_branch.png",
+        "width": 35,
+        "height": 58
+      },
+      {
+        "name": "leaf_accent_small_center",
+        "category": "leaves",
+        "path": "leaves/leaf_accent_small_center.png",
+        "width": 51,
+        "height": 26
+      },
+      {
+        "name": "leaf_accent_stalk_bud",
+        "category": "leaves",
+        "path": "leaves/leaf_accent_stalk_bud.png",
+        "width": 21,
+        "height": 36
+      },
+      {
+        "name": "leaf_pair_sprig_right",
+        "category": "leaves",
+        "path": "leaves/leaf_pair_sprig_right.png",
+        "width": 41,
+        "height": 76
+      },
+      {
+        "name": "leaf_under_right_branch_1",
+        "category": "leaves",
+        "path": "leaves/leaf_under_right_branch_1.png",
+        "width": 37,
+        "height": 36
+      },
+      {
+        "name": "leaf_under_right_branch_2",
+        "category": "leaves",
+        "path": "leaves/leaf_under_right_branch_2.png",
+        "width": 25,
+        "height": 39
+      }
+    ]
+  },
+  "total_assets": 111,
+  "assets": [
+    {
+      "name": "landscape_meadow_mountains",
+      "category": "landscapes",
+      "path": "landscapes/landscape_meadow_mountains.png",
+      "width": 744,
+      "height": 196
+    },
+    {
+      "name": "landscape_river_stream",
+      "category": "landscapes",
+      "path": "landscapes/landscape_river_stream.png",
+      "width": 754,
+      "height": 206
+    },
+    {
+      "name": "landscape_lake_hills",
+      "category": "landscapes",
+      "path": "landscapes/landscape_lake_hills.png",
+      "width": 746,
+      "height": 145
+    },
+    {
+      "name": "landscape_sunset_peaks",
+      "category": "landscapes",
+      "path": "landscapes/landscape_sunset_peaks.png",
+      "width": 746,
+      "height": 169
+    },
+    {
+      "name": "branch_drooping_left",
+      "category": "branches",
+      "path": "branches/branch_drooping_left.png",
+      "width": 377,
+      "height": 247
+    },
+    {
+      "name": "branch_drooping_right",
+      "category": "branches",
+      "path": "branches/branch_drooping_right.png",
+      "width": 419,
+      "height": 277
+    },
+    {
+      "name": "mountain_silhouette_1_left",
+      "category": "dividers",
+      "path": "dividers/mountain_silhouette_1_left.png",
+      "width": 612,
+      "height": 65
+    },
+    {
+      "name": "mountain_silhouette_2_center_left",
+      "category": "dividers",
+      "path": "dividers/mountain_silhouette_2_center_left.png",
+      "width": 259,
+      "height": 61
+    },
+    {
+      "name": "mountain_silhouette_3_center_right",
+      "category": "dividers",
+      "path": "dividers/mountain_silhouette_3_center_right.png",
+      "width": 373,
+      "height": 59
+    },
+    {
+      "name": "mountain_silhouette_4_right",
+      "category": "dividers",
+      "path": "dividers/mountain_silhouette_4_right.png",
+      "width": 246,
+      "height": 72
+    },
+    {
+      "name": "cat_home_and_living",
+      "category": "categories",
+      "path": "categories/cat_home_and_living.png",
+      "width": 207,
+      "height": 178
+    },
+    {
+      "name": "cat_home_and_living_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_home_and_living_illustration_only.png",
+      "width": 200,
+      "height": 133
+    },
+    {
+      "name": "cat_home_and_living_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_home_and_living_pill_button_only.png",
+      "width": 200,
+      "height": 39
+    },
+    {
+      "name": "cat_beauty_and_personal_care",
+      "category": "categories",
+      "path": "categories/cat_beauty_and_personal_care.png",
+      "width": 195,
+      "height": 154
+    },
+    {
+      "name": "cat_beauty_and_personal_care_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_beauty_and_personal_care_illustration_only.png",
+      "width": 189,
+      "height": 109
+    },
+    {
+      "name": "cat_beauty_and_personal_care_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_beauty_and_personal_care_pill_button_only.png",
+      "width": 183,
+      "height": 39
+    },
+    {
+      "name": "cat_zero_waste_essentials",
+      "category": "categories",
+      "path": "categories/cat_zero_waste_essentials.png",
+      "width": 221,
+      "height": 160
+    },
+    {
+      "name": "cat_zero_waste_essentials_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_zero_waste_essentials_illustration_only.png",
+      "width": 215,
+      "height": 115
+    },
+    {
+      "name": "cat_zero_waste_essentials_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_zero_waste_essentials_pill_button_only.png",
+      "width": 186,
+      "height": 39
+    },
+    {
+      "name": "cat_fashion_and_kids",
+      "category": "categories",
+      "path": "categories/cat_fashion_and_kids.png",
+      "width": 213,
+      "height": 154
+    },
+    {
+      "name": "cat_fashion_and_kids_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_fashion_and_kids_illustration_only.png",
+      "width": 207,
+      "height": 109
+    },
+    {
+      "name": "cat_fashion_and_kids_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_fashion_and_kids_pill_button_only.png",
+      "width": 202,
+      "height": 39
+    },
+    {
+      "name": "cat_conscious_gifting",
+      "category": "categories",
+      "path": "categories/cat_conscious_gifting.png",
+      "width": 203,
+      "height": 151
+    },
+    {
+      "name": "cat_conscious_gifting_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_conscious_gifting_illustration_only.png",
+      "width": 197,
+      "height": 106
+    },
+    {
+      "name": "cat_conscious_gifting_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_conscious_gifting_pill_button_only.png",
+      "width": 166,
+      "height": 39
+    },
+    {
+      "name": "cat_sustainable_packaging",
+      "category": "categories",
+      "path": "categories/cat_sustainable_packaging.png",
+      "width": 210,
+      "height": 160
+    },
+    {
+      "name": "cat_sustainable_packaging_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_sustainable_packaging_illustration_only.png",
+      "width": 204,
+      "height": 114
+    },
+    {
+      "name": "cat_sustainable_packaging_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_sustainable_packaging_pill_button_only.png",
+      "width": 177,
+      "height": 40
+    },
+    {
+      "name": "cat_clean_tech",
+      "category": "categories",
+      "path": "categories/cat_clean_tech.png",
+      "width": 204,
+      "height": 147
+    },
+    {
+      "name": "cat_clean_tech_illustration_only",
+      "category": "categories",
+      "path": "categories/cat_clean_tech_illustration_only.png",
+      "width": 198,
+      "height": 102
+    },
+    {
+      "name": "cat_clean_tech_pill_button_only",
+      "category": "categories",
+      "path": "categories/cat_clean_tech_pill_button_only.png",
+      "width": 192,
+      "height": 39
+    },
+    {
+      "name": "circularity_01_choose",
+      "category": "circularity",
+      "path": "circularity/circularity_01_choose.png",
+      "width": 128,
+      "height": 149
+    },
+    {
+      "name": "circularity_01_choose_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_01_choose_badge_only.png",
+      "width": 128,
+      "height": 121
+    },
+    {
+      "name": "circularity_01_choose_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_01_choose_label_only.png",
+      "width": 54,
+      "height": 17
+    },
+    {
+      "name": "circularity_02_use",
+      "category": "circularity",
+      "path": "circularity/circularity_02_use.png",
+      "width": 127,
+      "height": 147
+    },
+    {
+      "name": "circularity_02_use_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_02_use_badge_only.png",
+      "width": 127,
+      "height": 118
+    },
+    {
+      "name": "circularity_02_use_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_02_use_label_only.png",
+      "width": 29,
+      "height": 16
+    },
+    {
+      "name": "circularity_03_reuse",
+      "category": "circularity",
+      "path": "circularity/circularity_03_reuse.png",
+      "width": 127,
+      "height": 148
+    },
+    {
+      "name": "circularity_03_reuse_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_03_reuse_badge_only.png",
+      "width": 127,
+      "height": 117
+    },
+    {
+      "name": "circularity_03_reuse_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_03_reuse_label_only.png",
+      "width": 44,
+      "height": 16
+    },
+    {
+      "name": "circularity_04_return",
+      "category": "circularity",
+      "path": "circularity/circularity_04_return.png",
+      "width": 132,
+      "height": 147
+    },
+    {
+      "name": "circularity_04_return_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_04_return_badge_only.png",
+      "width": 132,
+      "height": 124
+    },
+    {
+      "name": "circularity_04_return_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_04_return_label_only.png",
+      "width": 52,
+      "height": 16
+    },
+    {
+      "name": "circularity_05_regenerate",
+      "category": "circularity",
+      "path": "circularity/circularity_05_regenerate.png",
+      "width": 147,
+      "height": 152
+    },
+    {
+      "name": "circularity_05_regenerate_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_05_regenerate_badge_only.png",
+      "width": 147,
+      "height": 121
+    },
+    {
+      "name": "circularity_05_regenerate_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_05_regenerate_label_only.png",
+      "width": 81,
+      "height": 21
+    },
+    {
+      "name": "circularity_06_greater_impact",
+      "category": "circularity",
+      "path": "circularity/circularity_06_greater_impact.png",
+      "width": 143,
+      "height": 160
+    },
+    {
+      "name": "circularity_06_greater_impact_badge_only",
+      "category": "circularity",
+      "path": "circularity/circularity_06_greater_impact_badge_only.png",
+      "width": 143,
+      "height": 135
+    },
+    {
+      "name": "circularity_06_greater_impact_label_only",
+      "category": "circularity",
+      "path": "circularity/circularity_06_greater_impact_label_only.png",
+      "width": 109,
+      "height": 21
+    },
+    {
+      "name": "seal_sustainable",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_sustainable.png",
+      "width": 56,
+      "height": 69
+    },
+    {
+      "name": "icon_sustainable",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_sustainable.png",
+      "width": 56,
+      "height": 54
+    },
+    {
+      "name": "seal_recycled",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_recycled.png",
+      "width": 56,
+      "height": 70
+    },
+    {
+      "name": "icon_recycled",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_recycled.png",
+      "width": 56,
+      "height": 55
+    },
+    {
+      "name": "seal_organic",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_organic.png",
+      "width": 57,
+      "height": 70
+    },
+    {
+      "name": "icon_organic",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_organic.png",
+      "width": 57,
+      "height": 54
+    },
+    {
+      "name": "seal_plastic_free",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_plastic_free.png",
+      "width": 57,
+      "height": 69
+    },
+    {
+      "name": "icon_plastic_free",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_plastic_free.png",
+      "width": 57,
+      "height": 55
+    },
+    {
+      "name": "seal_handmade",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_handmade.png",
+      "width": 57,
+      "height": 69
+    },
+    {
+      "name": "icon_handmade",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_handmade.png",
+      "width": 57,
+      "height": 55
+    },
+    {
+      "name": "seal_locally_made",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_locally_made.png",
+      "width": 63,
+      "height": 70
+    },
+    {
+      "name": "icon_locally_made",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_locally_made.png",
+      "width": 56,
+      "height": 54
+    },
+    {
+      "name": "seal_biodegradable",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_biodegradable.png",
+      "width": 68,
+      "height": 73
+    },
+    {
+      "name": "icon_biodegradable",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_biodegradable.png",
+      "width": 57,
+      "height": 56
+    },
+    {
+      "name": "seal_ethical",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_ethical.png",
+      "width": 56,
+      "height": 71
+    },
+    {
+      "name": "icon_ethical",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_ethical.png",
+      "width": 56,
+      "height": 55
+    },
+    {
+      "name": "seal_low_waste",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_low_waste.png",
+      "width": 57,
+      "height": 71
+    },
+    {
+      "name": "icon_low_waste",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_low_waste.png",
+      "width": 57,
+      "height": 56
+    },
+    {
+      "name": "seal_cruelty_free",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_cruelty_free.png",
+      "width": 59,
+      "height": 73
+    },
+    {
+      "name": "icon_cruelty_free",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_cruelty_free.png",
+      "width": 57,
+      "height": 56
+    },
+    {
+      "name": "seal_vegan",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_vegan.png",
+      "width": 57,
+      "height": 73
+    },
+    {
+      "name": "icon_vegan",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_vegan.png",
+      "width": 57,
+      "height": 56
+    },
+    {
+      "name": "seal_circular",
+      "category": "eco_seals",
+      "path": "eco_seals/seal_circular.png",
+      "width": 56,
+      "height": 71
+    },
+    {
+      "name": "icon_circular",
+      "category": "eco_seals",
+      "path": "eco_seals/icon_circular.png",
+      "width": 56,
+      "height": 56
+    },
+    {
+      "name": "vine_accent_leaf_left",
+      "category": "dividers",
+      "path": "dividers/vine_accent_leaf_left.png",
+      "width": 40,
+      "height": 46
+    },
+    {
+      "name": "vine_divider_daisy_left",
+      "category": "dividers",
+      "path": "dividers/vine_divider_daisy_left.png",
+      "width": 242,
+      "height": 44
+    },
+    {
+      "name": "vine_divider_center_complete",
+      "category": "dividers",
+      "path": "dividers/vine_divider_center_complete.png",
+      "width": 618,
+      "height": 52
+    },
+    {
+      "name": "vine_divider_leaves_right",
+      "category": "dividers",
+      "path": "dividers/vine_divider_leaves_right.png",
+      "width": 233,
+      "height": 37
+    },
+    {
+      "name": "vine_accent_leaf_right",
+      "category": "dividers",
+      "path": "dividers/vine_accent_leaf_right.png",
+      "width": 49,
+      "height": 42
+    },
+    {
+      "name": "daisy_cluster_left",
+      "category": "florals",
+      "path": "florals/daisy_cluster_left.png",
+      "width": 107,
+      "height": 85
+    },
+    {
+      "name": "meadow_wildflowers_bouquet",
+      "category": "florals",
+      "path": "florals/meadow_wildflowers_bouquet.png",
+      "width": 169,
+      "height": 119
+    },
+    {
+      "name": "daisy_bouquet_center",
+      "category": "florals",
+      "path": "florals/daisy_bouquet_center.png",
+      "width": 133,
+      "height": 129
+    },
+    {
+      "name": "yellow_wildflower_stalk",
+      "category": "florals",
+      "path": "florals/yellow_wildflower_stalk.png",
+      "width": 58,
+      "height": 98
+    },
+    {
+      "name": "yellow_wildflowers_bouquet",
+      "category": "florals",
+      "path": "florals/yellow_wildflowers_bouquet.png",
+      "width": 88,
+      "height": 74
+    },
+    {
+      "name": "daisies_with_stones_patch",
+      "category": "florals",
+      "path": "florals/daisies_with_stones_patch.png",
+      "width": 117,
+      "height": 118
+    },
+    {
+      "name": "single_daisy_blossom",
+      "category": "florals",
+      "path": "florals/single_daisy_blossom.png",
+      "width": 97,
+      "height": 73
+    },
+    {
+      "name": "yellow_blossoms_cluster",
+      "category": "florals",
+      "path": "florals/yellow_blossoms_cluster.png",
+      "width": 133,
+      "height": 87
+    },
+    {
+      "name": "floral_cluster_9",
+      "category": "florals",
+      "path": "florals/floral_cluster_9.png",
+      "width": 51,
+      "height": 57
+    },
+    {
+      "name": "daisy_blossom_accent",
+      "category": "florals",
+      "path": "florals/daisy_blossom_accent.png",
+      "width": 54,
+      "height": 51
+    },
+    {
+      "name": "leaf_top_center_sprout_1",
+      "category": "leaves",
+      "path": "leaves/leaf_top_center_sprout_1.png",
+      "width": 21,
+      "height": 26
+    },
+    {
+      "name": "leaf_top_center_sprout_2",
+      "category": "leaves",
+      "path": "leaves/leaf_top_center_sprout_2.png",
+      "width": 18,
+      "height": 22
+    },
+    {
+      "name": "leaf_top_meadow_floating",
+      "category": "leaves",
+      "path": "leaves/leaf_top_meadow_floating.png",
+      "width": 48,
+      "height": 37
+    },
+    {
+      "name": "leaf_top_sky_drifting_1",
+      "category": "leaves",
+      "path": "leaves/leaf_top_sky_drifting_1.png",
+      "width": 17,
+      "height": 36
+    },
+    {
+      "name": "leaf_top_sky_drifting_2",
+      "category": "leaves",
+      "path": "leaves/leaf_top_sky_drifting_2.png",
+      "width": 20,
+      "height": 31
+    },
+    {
+      "name": "leaf_top_sky_drifting_3",
+      "category": "leaves",
+      "path": "leaves/leaf_top_sky_drifting_3.png",
+      "width": 36,
+      "height": 30
+    },
+    {
+      "name": "leaf_top_sunset_floating",
+      "category": "leaves",
+      "path": "leaves/leaf_top_sunset_floating.png",
+      "width": 37,
+      "height": 35
+    },
+    {
+      "name": "leaf_mid_curved_large",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_curved_large.png",
+      "width": 117,
+      "height": 66
+    },
+    {
+      "name": "leaf_mid_small_tilted",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_small_tilted.png",
+      "width": 51,
+      "height": 49
+    },
+    {
+      "name": "leaf_mid_upright_pointed",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_upright_pointed.png",
+      "width": 95,
+      "height": 80
+    },
+    {
+      "name": "leaf_mid_pointed_right",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_pointed_right.png",
+      "width": 122,
+      "height": 69
+    },
+    {
+      "name": "leaf_mid_wide_tilted",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_wide_tilted.png",
+      "width": 97,
+      "height": 67
+    },
+    {
+      "name": "leaf_mid_sprig_small_1",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_sprig_small_1.png",
+      "width": 54,
+      "height": 47
+    },
+    {
+      "name": "leaf_mid_vertical_slender",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_vertical_slender.png",
+      "width": 38,
+      "height": 68
+    },
+    {
+      "name": "leaf_mid_angled_down",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_angled_down.png",
+      "width": 99,
+      "height": 75
+    },
+    {
+      "name": "leaf_mid_sprig_branchlet",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_sprig_branchlet.png",
+      "width": 123,
+      "height": 96
+    },
+    {
+      "name": "leaf_mid_sprig_small_2",
+      "category": "leaves",
+      "path": "leaves/leaf_mid_sprig_small_2.png",
+      "width": 20,
+      "height": 44
+    },
+    {
+      "name": "leaf_under_left_branch",
+      "category": "leaves",
+      "path": "leaves/leaf_under_left_branch.png",
+      "width": 35,
+      "height": 58
+    },
+    {
+      "name": "leaf_accent_small_center",
+      "category": "leaves",
+      "path": "leaves/leaf_accent_small_center.png",
+      "width": 51,
+      "height": 26
+    },
+    {
+      "name": "leaf_accent_stalk_bud",
+      "category": "leaves",
+      "path": "leaves/leaf_accent_stalk_bud.png",
+      "width": 21,
+      "height": 36
+    },
+    {
+      "name": "leaf_pair_sprig_right",
+      "category": "leaves",
+      "path": "leaves/leaf_pair_sprig_right.png",
+      "width": 41,
+      "height": 76
+    },
+    {
+      "name": "leaf_under_right_branch_1",
+      "category": "leaves",
+      "path": "leaves/leaf_under_right_branch_1.png",
+      "width": 37,
+      "height": 36
+    },
+    {
+      "name": "leaf_under_right_branch_2",
+      "category": "leaves",
+      "path": "leaves/leaf_under_right_branch_2.png",
+      "width": 25,
+      "height": 39
+    }
+  ]
+}

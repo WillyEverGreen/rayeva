@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="circGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#187E91" />
+      <stop offset="50%" stop-color="#25A8BE" />
+      <stop offset="100%" stop-color="#244835" />
+    </linearGradient>
+  </defs>
+
+  <!-- 3-Segment Circularity Möbius Arc 1 (Top Right) -->
+  <path d="M80 20 C105 20 135 40 140 70 L148 64 L142 84 L122 80 L130 74 C125 52 102 36 80 36 Z" fill="url(#circGrad)" />
+
+  <!-- 3-Segment Circularity Möbius Arc 2 (Bottom Right to Left) -->
+  <path d="M136 94 C128 120 102 140 72 140 L76 150 L56 142 L66 124 L70 132 C92 132 114 116 122 94 Z" fill="url(#circGrad)" />
+
+  <!-- 3-Segment Circularity Möbius Arc 3 (Left Upward) -->
+  <path d="M54 126 C32 108 20 80 28 50 L18 54 L28 36 L44 48 L36 50 C30 72 40 96 58 112 Z" fill="url(#circGrad)" />
+
+  <!-- Center Botanical Sprout -->
+  <path d="M80 95 C80 80 80 65 80 54" stroke="#244835" stroke-width="2.5" />
+  <path d="M80 72 C70 65 62 68 60 76 C68 80 76 76 80 72 Z" fill="#E3EFE7" stroke="#244835" stroke-width="1.8" />
+  <path d="M80 64 C90 57 98 60 100 68 C92 72 84 68 80 64 Z" fill="#D4E7DC" stroke="#244835" stroke-width="1.8" />
+</svg>

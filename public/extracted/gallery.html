@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revaya Extracted Assets Showcase</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #0f1715;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 24px;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0 0 8px 0;
+      color: #34d399;
+      letter-spacing: -0.5px;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      margin: 0;
+      font-size: 15px;
+    }
+    .stats-badge {
+      display: inline-block;
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 13px;
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      margin-left: 10px;
+    }
+    .toggle-bar {
+      display: flex;
+      gap: 10px;
+      background: #182220;
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    button.bg-btn {
+      padding: 8px 16px;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+    button.bg-btn.active {
+      background: #059669;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .category-section {
+      margin-bottom: 48px;
+      background: rgba(24, 34, 32, 0.6);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 12px;
+    }
+    .category-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #a7f3d0;
+      text-transform: capitalize;
+    }
+    .category-count {
+      font-size: 13px;
+      color: #64748b;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #131c1a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #34d399;
+      box-shadow: 0 8px 24px rgba(52, 211, 153, 0.12);
+    }
+    .img-box {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: repeating-conic-gradient(#1e293b 0% 25%, #0f172a 0% 50%) 50% / 16px 16px;
+      border-radius: 8px;
+      padding: 12px;
+      overflow: hidden;
+    }
+    body.light-theme .img-box {
+      background: repeating-conic-gradient(#f1f5f9 0% 25%, #e2e8f0 0% 50%) 50% / 16px 16px;
+    }
+    body.white-theme .img-box {
+      background: #ffffff;
+    }
+    body.dark-theme .img-box {
+      background: #090e0d;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+    .card-title {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f1f5f9;
+      text-align: center;
+      word-break: break-all;
+    }
+    .card-meta {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+    .card-path {
+      font-size: 10px;
+      color: #475569;
+      margin-top: 4px;
+      word-break: break-all;
+      text-align: center;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body class="checker-theme">
+  <div class="header">
+    <div>
+      <h1>Revaya Spritesheet Assets <span class="stats-badge">111 Items</span></h1>
+      <p class="subtitle">Source: <code>01-site-revamp/public/new assets/grroup.png</code> | All items extracted into isolated, clean transparent PNGs</p>
+    </div>
+    <div class="toggle-bar">
+      <button class="bg-btn active" onclick="setTheme('checker-theme', this)">Checkerboard</button>
+      <button class="bg-btn" onclick="setTheme('dark-theme', this)">Dark Theme</button>
+      <button class="bg-btn" onclick="setTheme('light-theme', this)">Light Gray</button>
+      <button class="bg-btn" onclick="setTheme('white-theme', this)">Pure White</button>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">landscapes</div>
+      <div class="category-count">4 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="landscapes/landscape_meadow_mountains.png" alt="landscape_meadow_mountains" loading="lazy" />
+        </div>
+        <div class="card-title">landscape_meadow_mountains</div>
+        <div class="card-meta">744 × 196 px</div>
+        <div class="card-path">landscapes/landscape_meadow_mountains.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="landscapes/landscape_river_stream.png" alt="landscape_river_stream" loading="lazy" />
+        </div>
+        <div class="card-title">landscape_river_stream</div>
+        <div class="card-meta">754 × 206 px</div>
+        <div class="card-path">landscapes/landscape_river_stream.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="landscapes/landscape_lake_hills.png" alt="landscape_lake_hills" loading="lazy" />
+        </div>
+        <div class="card-title">landscape_lake_hills</div>
+        <div class="card-meta">746 × 145 px</div>
+        <div class="card-path">landscapes/landscape_lake_hills.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="landscapes/landscape_sunset_peaks.png" alt="landscape_sunset_peaks" loading="lazy" />
+        </div>
+        <div class="card-title">landscape_sunset_peaks</div>
+        <div class="card-meta">746 × 169 px</div>
+        <div class="card-path">landscapes/landscape_sunset_peaks.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">branches</div>
+      <div class="category-count">2 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="branches/branch_drooping_left.png" alt="branch_drooping_left" loading="lazy" />
+        </div>
+        <div class="card-title">branch_drooping_left</div>
+        <div class="card-meta">377 × 247 px</div>
+        <div class="card-path">branches/branch_drooping_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="branches/branch_drooping_right.png" alt="branch_drooping_right" loading="lazy" />
+        </div>
+        <div class="card-title">branch_drooping_right</div>
+        <div class="card-meta">419 × 277 px</div>
+        <div class="card-path">branches/branch_drooping_right.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">dividers</div>
+      <div class="category-count">9 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/mountain_silhouette_1_left.png" alt="mountain_silhouette_1_left" loading="lazy" />
+        </div>
+        <div class="card-title">mountain_silhouette_1_left</div>
+        <div class="card-meta">612 × 65 px</div>
+        <div class="card-path">dividers/mountain_silhouette_1_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/mountain_silhouette_2_center_left.png" alt="mountain_silhouette_2_center_left" loading="lazy" />
+        </div>
+        <div class="card-title">mountain_silhouette_2_center_left</div>
+        <div class="card-meta">259 × 61 px</div>
+        <div class="card-path">dividers/mountain_silhouette_2_center_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/mountain_silhouette_3_center_right.png" alt="mountain_silhouette_3_center_right" loading="lazy" />
+        </div>
+        <div class="card-title">mountain_silhouette_3_center_right</div>
+        <div class="card-meta">373 × 59 px</div>
+        <div class="card-path">dividers/mountain_silhouette_3_center_right.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/mountain_silhouette_4_right.png" alt="mountain_silhouette_4_right" loading="lazy" />
+        </div>
+        <div class="card-title">mountain_silhouette_4_right</div>
+        <div class="card-meta">246 × 72 px</div>
+        <div class="card-path">dividers/mountain_silhouette_4_right.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/vine_accent_leaf_left.png" alt="vine_accent_leaf_left" loading="lazy" />
+        </div>
+        <div class="card-title">vine_accent_leaf_left</div>
+        <div class="card-meta">40 × 46 px</div>
+        <div class="card-path">dividers/vine_accent_leaf_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/vine_divider_daisy_left.png" alt="vine_divider_daisy_left" loading="lazy" />
+        </div>
+        <div class="card-title">vine_divider_daisy_left</div>
+        <div class="card-meta">242 × 44 px</div>
+        <div class="card-path">dividers/vine_divider_daisy_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/vine_divider_center_complete.png" alt="vine_divider_center_complete" loading="lazy" />
+        </div>
+        <div class="card-title">vine_divider_center_complete</div>
+        <div class="card-meta">618 × 52 px</div>
+        <div class="card-path">dividers/vine_divider_center_complete.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/vine_divider_leaves_right.png" alt="vine_divider_leaves_right" loading="lazy" />
+        </div>
+        <div class="card-title">vine_divider_leaves_right</div>
+        <div class="card-meta">233 × 37 px</div>
+        <div class="card-path">dividers/vine_divider_leaves_right.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="dividers/vine_accent_leaf_right.png" alt="vine_accent_leaf_right" loading="lazy" />
+        </div>
+        <div class="card-title">vine_accent_leaf_right</div>
+        <div class="card-meta">49 × 42 px</div>
+        <div class="card-path">dividers/vine_accent_leaf_right.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">categories</div>
+      <div class="category-count">21 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_home_and_living.png" alt="cat_home_and_living" loading="lazy" />
+        </div>
+        <div class="card-title">cat_home_and_living</div>
+        <div class="card-meta">207 × 178 px</div>
+        <div class="card-path">categories/cat_home_and_living.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_home_and_living_illustration_only.png" alt="cat_home_and_living_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_home_and_living_illustration_only</div>
+        <div class="card-meta">200 × 133 px</div>
+        <div class="card-path">categories/cat_home_and_living_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_home_and_living_pill_button_only.png" alt="cat_home_and_living_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_home_and_living_pill_button_only</div>
+        <div class="card-meta">200 × 39 px</div>
+        <div class="card-path">categories/cat_home_and_living_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_beauty_and_personal_care.png" alt="cat_beauty_and_personal_care" loading="lazy" />
+        </div>
+        <div class="card-title">cat_beauty_and_personal_care</div>
+        <div class="card-meta">195 × 154 px</div>
+        <div class="card-path">categories/cat_beauty_and_personal_care.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_beauty_and_personal_care_illustration_only.png" alt="cat_beauty_and_personal_care_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_beauty_and_personal_care_illustration_only</div>
+        <div class="card-meta">189 × 109 px</div>
+        <div class="card-path">categories/cat_beauty_and_personal_care_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_beauty_and_personal_care_pill_button_only.png" alt="cat_beauty_and_personal_care_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_beauty_and_personal_care_pill_button_only</div>
+        <div class="card-meta">183 × 39 px</div>
+        <div class="card-path">categories/cat_beauty_and_personal_care_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_zero_waste_essentials.png" alt="cat_zero_waste_essentials" loading="lazy" />
+        </div>
+        <div class="card-title">cat_zero_waste_essentials</div>
+        <div class="card-meta">221 × 160 px</div>
+        <div class="card-path">categories/cat_zero_waste_essentials.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_zero_waste_essentials_illustration_only.png" alt="cat_zero_waste_essentials_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_zero_waste_essentials_illustration_only</div>
+        <div class="card-meta">215 × 115 px</div>
+        <div class="card-path">categories/cat_zero_waste_essentials_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_zero_waste_essentials_pill_button_only.png" alt="cat_zero_waste_essentials_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_zero_waste_essentials_pill_button_only</div>
+        <div class="card-meta">186 × 39 px</div>
+        <div class="card-path">categories/cat_zero_waste_essentials_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_fashion_and_kids.png" alt="cat_fashion_and_kids" loading="lazy" />
+        </div>
+        <div class="card-title">cat_fashion_and_kids</div>
+        <div class="card-meta">213 × 154 px</div>
+        <div class="card-path">categories/cat_fashion_and_kids.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_fashion_and_kids_illustration_only.png" alt="cat_fashion_and_kids_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_fashion_and_kids_illustration_only</div>
+        <div class="card-meta">207 × 109 px</div>
+        <div class="card-path">categories/cat_fashion_and_kids_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_fashion_and_kids_pill_button_only.png" alt="cat_fashion_and_kids_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_fashion_and_kids_pill_button_only</div>
+        <div class="card-meta">202 × 39 px</div>
+        <div class="card-path">categories/cat_fashion_and_kids_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_conscious_gifting.png" alt="cat_conscious_gifting" loading="lazy" />
+        </div>
+        <div class="card-title">cat_conscious_gifting</div>
+        <div class="card-meta">203 × 151 px</div>
+        <div class="card-path">categories/cat_conscious_gifting.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_conscious_gifting_illustration_only.png" alt="cat_conscious_gifting_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_conscious_gifting_illustration_only</div>
+        <div class="card-meta">197 × 106 px</div>
+        <div class="card-path">categories/cat_conscious_gifting_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_conscious_gifting_pill_button_only.png" alt="cat_conscious_gifting_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_conscious_gifting_pill_button_only</div>
+        <div class="card-meta">166 × 39 px</div>
+        <div class="card-path">categories/cat_conscious_gifting_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_sustainable_packaging.png" alt="cat_sustainable_packaging" loading="lazy" />
+        </div>
+        <div class="card-title">cat_sustainable_packaging</div>
+        <div class="card-meta">210 × 160 px</div>
+        <div class="card-path">categories/cat_sustainable_packaging.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_sustainable_packaging_illustration_only.png" alt="cat_sustainable_packaging_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_sustainable_packaging_illustration_only</div>
+        <div class="card-meta">204 × 114 px</div>
+        <div class="card-path">categories/cat_sustainable_packaging_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_sustainable_packaging_pill_button_only.png" alt="cat_sustainable_packaging_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_sustainable_packaging_pill_button_only</div>
+        <div class="card-meta">177 × 40 px</div>
+        <div class="card-path">categories/cat_sustainable_packaging_pill_button_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_clean_tech.png" alt="cat_clean_tech" loading="lazy" />
+        </div>
+        <div class="card-title">cat_clean_tech</div>
+        <div class="card-meta">204 × 147 px</div>
+        <div class="card-path">categories/cat_clean_tech.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_clean_tech_illustration_only.png" alt="cat_clean_tech_illustration_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_clean_tech_illustration_only</div>
+        <div class="card-meta">198 × 102 px</div>
+        <div class="card-path">categories/cat_clean_tech_illustration_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="categories/cat_clean_tech_pill_button_only.png" alt="cat_clean_tech_pill_button_only" loading="lazy" />
+        </div>
+        <div class="card-title">cat_clean_tech_pill_button_only</div>
+        <div class="card-meta">192 × 39 px</div>
+        <div class="card-path">categories/cat_clean_tech_pill_button_only.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">circularity</div>
+      <div class="category-count">18 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_01_choose.png" alt="circularity_01_choose" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_01_choose</div>
+        <div class="card-meta">128 × 149 px</div>
+        <div class="card-path">circularity/circularity_01_choose.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_01_choose_badge_only.png" alt="circularity_01_choose_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_01_choose_badge_only</div>
+        <div class="card-meta">128 × 121 px</div>
+        <div class="card-path">circularity/circularity_01_choose_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_01_choose_label_only.png" alt="circularity_01_choose_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_01_choose_label_only</div>
+        <div class="card-meta">54 × 17 px</div>
+        <div class="card-path">circularity/circularity_01_choose_label_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_02_use.png" alt="circularity_02_use" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_02_use</div>
+        <div class="card-meta">127 × 147 px</div>
+        <div class="card-path">circularity/circularity_02_use.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_02_use_badge_only.png" alt="circularity_02_use_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_02_use_badge_only</div>
+        <div class="card-meta">127 × 118 px</div>
+        <div class="card-path">circularity/circularity_02_use_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_02_use_label_only.png" alt="circularity_02_use_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_02_use_label_only</div>
+        <div class="card-meta">29 × 16 px</div>
+        <div class="card-path">circularity/circularity_02_use_label_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_03_reuse.png" alt="circularity_03_reuse" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_03_reuse</div>
+        <div class="card-meta">127 × 148 px</div>
+        <div class="card-path">circularity/circularity_03_reuse.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_03_reuse_badge_only.png" alt="circularity_03_reuse_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_03_reuse_badge_only</div>
+        <div class="card-meta">127 × 117 px</div>
+        <div class="card-path">circularity/circularity_03_reuse_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_03_reuse_label_only.png" alt="circularity_03_reuse_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_03_reuse_label_only</div>
+        <div class="card-meta">44 × 16 px</div>
+        <div class="card-path">circularity/circularity_03_reuse_label_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_04_return.png" alt="circularity_04_return" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_04_return</div>
+        <div class="card-meta">132 × 147 px</div>
+        <div class="card-path">circularity/circularity_04_return.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_04_return_badge_only.png" alt="circularity_04_return_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_04_return_badge_only</div>
+        <div class="card-meta">132 × 124 px</div>
+        <div class="card-path">circularity/circularity_04_return_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_04_return_label_only.png" alt="circularity_04_return_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_04_return_label_only</div>
+        <div class="card-meta">52 × 16 px</div>
+        <div class="card-path">circularity/circularity_04_return_label_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_05_regenerate.png" alt="circularity_05_regenerate" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_05_regenerate</div>
+        <div class="card-meta">147 × 152 px</div>
+        <div class="card-path">circularity/circularity_05_regenerate.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_05_regenerate_badge_only.png" alt="circularity_05_regenerate_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_05_regenerate_badge_only</div>
+        <div class="card-meta">147 × 121 px</div>
+        <div class="card-path">circularity/circularity_05_regenerate_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_05_regenerate_label_only.png" alt="circularity_05_regenerate_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_05_regenerate_label_only</div>
+        <div class="card-meta">81 × 21 px</div>
+        <div class="card-path">circularity/circularity_05_regenerate_label_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_06_greater_impact.png" alt="circularity_06_greater_impact" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_06_greater_impact</div>
+        <div class="card-meta">143 × 160 px</div>
+        <div class="card-path">circularity/circularity_06_greater_impact.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_06_greater_impact_badge_only.png" alt="circularity_06_greater_impact_badge_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_06_greater_impact_badge_only</div>
+        <div class="card-meta">143 × 135 px</div>
+        <div class="card-path">circularity/circularity_06_greater_impact_badge_only.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="circularity/circularity_06_greater_impact_label_only.png" alt="circularity_06_greater_impact_label_only" loading="lazy" />
+        </div>
+        <div class="card-title">circularity_06_greater_impact_label_only</div>
+        <div class="card-meta">109 × 21 px</div>
+        <div class="card-path">circularity/circularity_06_greater_impact_label_only.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">eco seals</div>
+      <div class="category-count">24 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_sustainable.png" alt="seal_sustainable" loading="lazy" />
+        </div>
+        <div class="card-title">seal_sustainable</div>
+        <div class="card-meta">56 × 69 px</div>
+        <div class="card-path">eco_seals/seal_sustainable.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_sustainable.png" alt="icon_sustainable" loading="lazy" />
+        </div>
+        <div class="card-title">icon_sustainable</div>
+        <div class="card-meta">56 × 54 px</div>
+        <div class="card-path">eco_seals/icon_sustainable.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_recycled.png" alt="seal_recycled" loading="lazy" />
+        </div>
+        <div class="card-title">seal_recycled</div>
+        <div class="card-meta">56 × 70 px</div>
+        <div class="card-path">eco_seals/seal_recycled.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_recycled.png" alt="icon_recycled" loading="lazy" />
+        </div>
+        <div class="card-title">icon_recycled</div>
+        <div class="card-meta">56 × 55 px</div>
+        <div class="card-path">eco_seals/icon_recycled.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_organic.png" alt="seal_organic" loading="lazy" />
+        </div>
+        <div class="card-title">seal_organic</div>
+        <div class="card-meta">57 × 70 px</div>
+        <div class="card-path">eco_seals/seal_organic.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_organic.png" alt="icon_organic" loading="lazy" />
+        </div>
+        <div class="card-title">icon_organic</div>
+        <div class="card-meta">57 × 54 px</div>
+        <div class="card-path">eco_seals/icon_organic.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_plastic_free.png" alt="seal_plastic_free" loading="lazy" />
+        </div>
+        <div class="card-title">seal_plastic_free</div>
+        <div class="card-meta">57 × 69 px</div>
+        <div class="card-path">eco_seals/seal_plastic_free.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_plastic_free.png" alt="icon_plastic_free" loading="lazy" />
+        </div>
+        <div class="card-title">icon_plastic_free</div>
+        <div class="card-meta">57 × 55 px</div>
+        <div class="card-path">eco_seals/icon_plastic_free.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_handmade.png" alt="seal_handmade" loading="lazy" />
+        </div>
+        <div class="card-title">seal_handmade</div>
+        <div class="card-meta">57 × 69 px</div>
+        <div class="card-path">eco_seals/seal_handmade.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_handmade.png" alt="icon_handmade" loading="lazy" />
+        </div>
+        <div class="card-title">icon_handmade</div>
+        <div class="card-meta">57 × 55 px</div>
+        <div class="card-path">eco_seals/icon_handmade.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_locally_made.png" alt="seal_locally_made" loading="lazy" />
+        </div>
+        <div class="card-title">seal_locally_made</div>
+        <div class="card-meta">63 × 70 px</div>
+        <div class="card-path">eco_seals/seal_locally_made.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_locally_made.png" alt="icon_locally_made" loading="lazy" />
+        </div>
+        <div class="card-title">icon_locally_made</div>
+        <div class="card-meta">56 × 54 px</div>
+        <div class="card-path">eco_seals/icon_locally_made.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_biodegradable.png" alt="seal_biodegradable" loading="lazy" />
+        </div>
+        <div class="card-title">seal_biodegradable</div>
+        <div class="card-meta">68 × 73 px</div>
+        <div class="card-path">eco_seals/seal_biodegradable.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_biodegradable.png" alt="icon_biodegradable" loading="lazy" />
+        </div>
+        <div class="card-title">icon_biodegradable</div>
+        <div class="card-meta">57 × 56 px</div>
+        <div class="card-path">eco_seals/icon_biodegradable.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_ethical.png" alt="seal_ethical" loading="lazy" />
+        </div>
+        <div class="card-title">seal_ethical</div>
+        <div class="card-meta">56 × 71 px</div>
+        <div class="card-path">eco_seals/seal_ethical.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_ethical.png" alt="icon_ethical" loading="lazy" />
+        </div>
+        <div class="card-title">icon_ethical</div>
+        <div class="card-meta">56 × 55 px</div>
+        <div class="card-path">eco_seals/icon_ethical.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_low_waste.png" alt="seal_low_waste" loading="lazy" />
+        </div>
+        <div class="card-title">seal_low_waste</div>
+        <div class="card-meta">57 × 71 px</div>
+        <div class="card-path">eco_seals/seal_low_waste.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_low_waste.png" alt="icon_low_waste" loading="lazy" />
+        </div>
+        <div class="card-title">icon_low_waste</div>
+        <div class="card-meta">57 × 56 px</div>
+        <div class="card-path">eco_seals/icon_low_waste.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_cruelty_free.png" alt="seal_cruelty_free" loading="lazy" />
+        </div>
+        <div class="card-title">seal_cruelty_free</div>
+        <div class="card-meta">59 × 73 px</div>
+        <div class="card-path">eco_seals/seal_cruelty_free.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_cruelty_free.png" alt="icon_cruelty_free" loading="lazy" />
+        </div>
+        <div class="card-title">icon_cruelty_free</div>
+        <div class="card-meta">57 × 56 px</div>
+        <div class="card-path">eco_seals/icon_cruelty_free.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_vegan.png" alt="seal_vegan" loading="lazy" />
+        </div>
+        <div class="card-title">seal_vegan</div>
+        <div class="card-meta">57 × 73 px</div>
+        <div class="card-path">eco_seals/seal_vegan.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_vegan.png" alt="icon_vegan" loading="lazy" />
+        </div>
+        <div class="card-title">icon_vegan</div>
+        <div class="card-meta">57 × 56 px</div>
+        <div class="card-path">eco_seals/icon_vegan.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/seal_circular.png" alt="seal_circular" loading="lazy" />
+        </div>
+        <div class="card-title">seal_circular</div>
+        <div class="card-meta">56 × 71 px</div>
+        <div class="card-path">eco_seals/seal_circular.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="eco_seals/icon_circular.png" alt="icon_circular" loading="lazy" />
+        </div>
+        <div class="card-title">icon_circular</div>
+        <div class="card-meta">56 × 56 px</div>
+        <div class="card-path">eco_seals/icon_circular.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">florals</div>
+      <div class="category-count">10 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/daisy_cluster_left.png" alt="daisy_cluster_left" loading="lazy" />
+        </div>
+        <div class="card-title">daisy_cluster_left</div>
+        <div class="card-meta">107 × 85 px</div>
+        <div class="card-path">florals/daisy_cluster_left.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/meadow_wildflowers_bouquet.png" alt="meadow_wildflowers_bouquet" loading="lazy" />
+        </div>
+        <div class="card-title">meadow_wildflowers_bouquet</div>
+        <div class="card-meta">169 × 119 px</div>
+        <div class="card-path">florals/meadow_wildflowers_bouquet.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/daisy_bouquet_center.png" alt="daisy_bouquet_center" loading="lazy" />
+        </div>
+        <div class="card-title">daisy_bouquet_center</div>
+        <div class="card-meta">133 × 129 px</div>
+        <div class="card-path">florals/daisy_bouquet_center.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/yellow_wildflower_stalk.png" alt="yellow_wildflower_stalk" loading="lazy" />
+        </div>
+        <div class="card-title">yellow_wildflower_stalk</div>
+        <div class="card-meta">58 × 98 px</div>
+        <div class="card-path">florals/yellow_wildflower_stalk.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/yellow_wildflowers_bouquet.png" alt="yellow_wildflowers_bouquet" loading="lazy" />
+        </div>
+        <div class="card-title">yellow_wildflowers_bouquet</div>
+        <div class="card-meta">88 × 74 px</div>
+        <div class="card-path">florals/yellow_wildflowers_bouquet.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/daisies_with_stones_patch.png" alt="daisies_with_stones_patch" loading="lazy" />
+        </div>
+        <div class="card-title">daisies_with_stones_patch</div>
+        <div class="card-meta">117 × 118 px</div>
+        <div class="card-path">florals/daisies_with_stones_patch.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/single_daisy_blossom.png" alt="single_daisy_blossom" loading="lazy" />
+        </div>
+        <div class="card-title">single_daisy_blossom</div>
+        <div class="card-meta">97 × 73 px</div>
+        <div class="card-path">florals/single_daisy_blossom.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/yellow_blossoms_cluster.png" alt="yellow_blossoms_cluster" loading="lazy" />
+        </div>
+        <div class="card-title">yellow_blossoms_cluster</div>
+        <div class="card-meta">133 × 87 px</div>
+        <div class="card-path">florals/yellow_blossoms_cluster.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/floral_cluster_9.png" alt="floral_cluster_9" loading="lazy" />
+        </div>
+        <div class="card-title">floral_cluster_9</div>
+        <div class="card-meta">51 × 57 px</div>
+        <div class="card-path">florals/floral_cluster_9.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="florals/daisy_blossom_accent.png" alt="daisy_blossom_accent" loading="lazy" />
+        </div>
+        <div class="card-title">daisy_blossom_accent</div>
+        <div class="card-meta">54 × 51 px</div>
+        <div class="card-path">florals/daisy_blossom_accent.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <div class="category-title">leaves</div>
+      <div class="category-count">23 assets</div>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_center_sprout_1.png" alt="leaf_top_center_sprout_1" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_center_sprout_1</div>
+        <div class="card-meta">21 × 26 px</div>
+        <div class="card-path">leaves/leaf_top_center_sprout_1.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_center_sprout_2.png" alt="leaf_top_center_sprout_2" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_center_sprout_2</div>
+        <div class="card-meta">18 × 22 px</div>
+        <div class="card-path">leaves/leaf_top_center_sprout_2.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_meadow_floating.png" alt="leaf_top_meadow_floating" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_meadow_floating</div>
+        <div class="card-meta">48 × 37 px</div>
+        <div class="card-path">leaves/leaf_top_meadow_floating.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_sky_drifting_1.png" alt="leaf_top_sky_drifting_1" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_sky_drifting_1</div>
+        <div class="card-meta">17 × 36 px</div>
+        <div class="card-path">leaves/leaf_top_sky_drifting_1.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_sky_drifting_2.png" alt="leaf_top_sky_drifting_2" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_sky_drifting_2</div>
+        <div class="card-meta">20 × 31 px</div>
+        <div class="card-path">leaves/leaf_top_sky_drifting_2.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_sky_drifting_3.png" alt="leaf_top_sky_drifting_3" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_sky_drifting_3</div>
+        <div class="card-meta">36 × 30 px</div>
+        <div class="card-path">leaves/leaf_top_sky_drifting_3.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_top_sunset_floating.png" alt="leaf_top_sunset_floating" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_top_sunset_floating</div>
+        <div class="card-meta">37 × 35 px</div>
+        <div class="card-path">leaves/leaf_top_sunset_floating.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_curved_large.png" alt="leaf_mid_curved_large" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_curved_large</div>
+        <div class="card-meta">117 × 66 px</div>
+        <div class="card-path">leaves/leaf_mid_curved_large.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_small_tilted.png" alt="leaf_mid_small_tilted" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_small_tilted</div>
+        <div class="card-meta">51 × 49 px</div>
+        <div class="card-path">leaves/leaf_mid_small_tilted.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_upright_pointed.png" alt="leaf_mid_upright_pointed" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_upright_pointed</div>
+        <div class="card-meta">95 × 80 px</div>
+        <div class="card-path">leaves/leaf_mid_upright_pointed.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_pointed_right.png" alt="leaf_mid_pointed_right" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_pointed_right</div>
+        <div class="card-meta">122 × 69 px</div>
+        <div class="card-path">leaves/leaf_mid_pointed_right.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_wide_tilted.png" alt="leaf_mid_wide_tilted" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_wide_tilted</div>
+        <div class="card-meta">97 × 67 px</div>
+        <div class="card-path">leaves/leaf_mid_wide_tilted.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_sprig_small_1.png" alt="leaf_mid_sprig_small_1" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_sprig_small_1</div>
+        <div class="card-meta">54 × 47 px</div>
+        <div class="card-path">leaves/leaf_mid_sprig_small_1.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_vertical_slender.png" alt="leaf_mid_vertical_slender" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_vertical_slender</div>
+        <div class="card-meta">38 × 68 px</div>
+        <div class="card-path">leaves/leaf_mid_vertical_slender.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_angled_down.png" alt="leaf_mid_angled_down" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_angled_down</div>
+        <div class="card-meta">99 × 75 px</div>
+        <div class="card-path">leaves/leaf_mid_angled_down.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_sprig_branchlet.png" alt="leaf_mid_sprig_branchlet" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_sprig_branchlet</div>
+        <div class="card-meta">123 × 96 px</div>
+        <div class="card-path">leaves/leaf_mid_sprig_branchlet.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_mid_sprig_small_2.png" alt="leaf_mid_sprig_small_2" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_mid_sprig_small_2</div>
+        <div class="card-meta">20 × 44 px</div>
+        <div class="card-path">leaves/leaf_mid_sprig_small_2.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_under_left_branch.png" alt="leaf_under_left_branch" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_under_left_branch</div>
+        <div class="card-meta">35 × 58 px</div>
+        <div class="card-path">leaves/leaf_under_left_branch.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_accent_small_center.png" alt="leaf_accent_small_center" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_accent_small_center</div>
+        <div class="card-meta">51 × 26 px</div>
+        <div class="card-path">leaves/leaf_accent_small_center.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_accent_stalk_bud.png" alt="leaf_accent_stalk_bud" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_accent_stalk_bud</div>
+        <div class="card-meta">21 × 36 px</div>
+        <div class="card-path">leaves/leaf_accent_stalk_bud.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_pair_sprig_right.png" alt="leaf_pair_sprig_right" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_pair_sprig_right</div>
+        <div class="card-meta">41 × 76 px</div>
+        <div class="card-path">leaves/leaf_pair_sprig_right.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_under_right_branch_1.png" alt="leaf_under_right_branch_1" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_under_right_branch_1</div>
+        <div class="card-meta">37 × 36 px</div>
+        <div class="card-path">leaves/leaf_under_right_branch_1.png</div>
+      </div>
+
+      <div class="card">
+        <div class="img-box">
+          <img src="leaves/leaf_under_right_branch_2.png" alt="leaf_under_right_branch_2" loading="lazy" />
+        </div>
+        <div class="card-title">leaf_under_right_branch_2</div>
+        <div class="card-meta">25 × 39 px</div>
+        <div class="card-path">leaves/leaf_under_right_branch_2.png</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function setTheme(theme, btn) {
+      document.body.className = theme;
+      document.querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

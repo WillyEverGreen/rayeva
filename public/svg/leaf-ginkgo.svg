@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ginkgo Biloba Leaf -->
+  <path d="M60 108 C60 92 60 76 60 62" stroke="#244835" stroke-width="2.2" />
+  <path d="M60 62 C48 54 28 48 18 36 C10 26 12 14 26 14 C42 14 54 30 58 44 C59 34 61 34 62 44 C66 30 78 14 94 14 C108 14 110 26 102 36 C92 48 72 54 60 62 Z" fill="#E3EFE7" stroke="#244835" stroke-width="2" />
+  <!-- Radial Leaf Vein Striations -->
+  <path d="M60 62 C50 48 38 34 32 24" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+  <path d="M60 62 C54 44 48 26 44 18" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+  <path d="M60 62 C58 40 56 24 55 16" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+  <path d="M60 62 C62 40 64 24 65 16" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+  <path d="M60 62 C66 44 72 26 76 18" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+  <path d="M60 62 C70 48 82 34 88 24" stroke="#187E91" stroke-width="1" stroke-opacity="0.6" />
+</svg>

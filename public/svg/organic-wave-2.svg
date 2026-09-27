@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+  <!-- Back Soft Teal Underlayer -->
+  <path d="M0 40 C280 110 520 20 780 80 C1040 140 1260 50 1440 90 L1440 180 L0 180 Z" fill="#E3EFE7" fill-opacity="0.6" />
+  <!-- Front Meadow Ivory Layer -->
+  <path d="M0 80 C320 20 580 130 840 70 C1100 10 1280 100 1440 50 L1440 180 L0 180 Z" fill="#FAF8F3" />
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Eucalyptus Branch -->
+  <path d="M60 155 C58 115 62 65 60 12" stroke="#244835" stroke-width="2" />
+  <!-- Opposing Circular Silver Dollar Leaves -->
+  <!-- Pair 1 -->
+  <ellipse cx="40" cy="130" rx="18" ry="14" transform="rotate(-15 40 130)" fill="#E3EFE7" stroke="#244835" stroke-width="1.6" />
+  <ellipse cx="80" cy="126" rx="18" ry="14" transform="rotate(15 80 126)" fill="#E3EFE7" stroke="#244835" stroke-width="1.6" />
+  <!-- Pair 2 -->
+  <ellipse cx="38" cy="98" rx="17" ry="13" transform="rotate(-20 38 98)" fill="#D4E7DC" stroke="#244835" stroke-width="1.6" />
+  <ellipse cx="82" cy="94" rx="17" ry="13" transform="rotate(20 82 94)" fill="#D4E7DC" stroke="#244835" stroke-width="1.6" />
+  <!-- Pair 3 -->
+  <ellipse cx="40" cy="68" rx="15" ry="12" transform="rotate(-15 40 68)" fill="#E3EFE7" stroke="#244835" stroke-width="1.6" />
+  <ellipse cx="80" cy="64" rx="15" ry="12" transform="rotate(15 80 64)" fill="#E3EFE7" stroke="#244835" stroke-width="1.6" />
+  <!-- Pair 4 -->
+  <ellipse cx="44" cy="40" rx="13" ry="10" transform="rotate(-10 44 40)" fill="#D4E7DC" stroke="#244835" stroke-width="1.6" />
+  <ellipse cx="76" cy="37" rx="13" ry="10" transform="rotate(10 76 37)" fill="#D4E7DC" stroke="#244835" stroke-width="1.6" />
+  <!-- Terminal Tip -->
+  <ellipse cx="60" cy="18" rx="9" ry="8" fill="#244835" stroke="#244835" stroke-width="1.2" />
+</svg>
