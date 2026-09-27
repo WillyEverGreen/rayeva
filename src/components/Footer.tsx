@@ -141,7 +141,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail size={15} className="text-teal-300 shrink-0" />
-                <span>governance@rayeva.com • impact@rayeva.com</span>
+                <span>partnerships.rayeva@gmail.com • governance@rayeva.com</span>
               </div>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function Footer() {
         {/* ---------------- 3. BOTTOM LEGAL & CARBON HOSTING BADGE ---------------- */}
         <div className="footer-col pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 relative z-10 text-center sm:text-left">
           <div className="flex items-center justify-center sm:justify-start gap-2">
-            <span>© {new Date().getFullYear()} Rayeva Technologies Private Limited. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Rayeva World Pvt. Ltd. All rights reserved.</span>
           </div>
 
           <div className="flex items-center justify-center gap-2 text-stone-400 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 text-center">
