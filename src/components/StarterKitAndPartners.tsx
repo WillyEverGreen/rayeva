@@ -531,21 +531,21 @@ export default function StarterKitAndPartners() {
             {/* Seamless Infinite / Draggable Track */}
             <div
               ref={sliderTrackRef}
-              className="flex gap-4 sm:gap-6 w-max select-none will-change-transform px-4 sm:px-6 md:px-1"
+              className="flex gap-4 sm:gap-6 w-max select-none will-change-transform px-5 sm:px-8 md:px-1"
             >
               {[...PARTNERS, ...PARTNERS].map((brand, idx) => (
                 <div
                   key={`${brand.name}-${idx}`}
-                  className="w-[76vw] max-w-[285px] sm:w-[350px] md:w-[380px] shrink-0 snap-center bg-white rounded-2xl sm:rounded-3xl p-4.5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
+                  className="w-[84vw] max-w-[330px] sm:w-[360px] md:w-[380px] shrink-0 snap-center bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.04)] hover:shadow-[0_24px_48px_-12px_rgba(24,126,145,0.14)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-default"
                 >
                   <div>
                     {/* Standout Brand Logo Showcase Header - Clean Pure Surface */}
-                    <div className="relative mb-3 sm:mb-5 h-16 sm:h-22 rounded-xl sm:rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center px-4 sm:px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
+                    <div className="relative mb-4 sm:mb-5 h-18 sm:h-22 rounded-xl sm:rounded-2xl bg-[#FCFBF9] border border-stone-200/90 shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] flex items-center justify-center p-3 sm:px-6 overflow-hidden transition-all duration-300 group-hover:border-stone-300 group-hover:bg-white group-hover:shadow-[0_6px_20px_-6px_rgba(0,0,0,0.06)]">
                       {/* Brand Logo Graphic - Tightly Cropped, High-Res, Transparent */}
                       <img
                         src={brand.logo}
                         alt={`${brand.name} logo`}
-                        className="relative z-10 max-h-9 sm:max-h-12 max-w-[150px] sm:max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+                        className="relative z-10 max-h-10 sm:max-h-12 max-w-[160px] sm:max-w-[210px] w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
                         loading="lazy"
                         draggable={false}
                         onError={(e) => {
@@ -569,7 +569,7 @@ export default function StarterKitAndPartners() {
                     {/* Category & Audited Badge */}
                     <div className="flex items-center justify-between gap-2 mb-2 sm:mb-2.5">
                       <span
-                        className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2 sm:px-2.5 py-0.5 rounded-full truncate"
+                        className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full truncate"
                         style={{ color: brand.accent, backgroundColor: `${brand.accent}14` }}
                       >
                         {brand.category}
@@ -586,12 +586,12 @@ export default function StarterKitAndPartners() {
                     </h4>
 
                     {/* Tagline - Fully readable on all devices without truncation */}
-                    <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed mt-2 sm:mt-2.5 font-normal">
+                    <p className="text-xs sm:text-[13px] text-stone-600 leading-relaxed mt-2.5 font-normal">
                       {brand.tagline}
                     </p>
 
                     {/* Core Highlight */}
-                    <div className="mt-3.5 sm:mt-4 p-2.5 sm:p-3 rounded-xl bg-stone-50/90 border border-stone-200/70 text-[11px] sm:text-xs font-medium text-stone-800 flex items-start gap-2 sm:gap-2.5">
+                    <div className="mt-3.5 sm:mt-4 p-3 rounded-xl bg-stone-50/90 border border-stone-200/70 text-[11px] sm:text-xs font-medium text-stone-800 flex items-start gap-2.5">
                       <span
                         className="w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
                         style={{ backgroundColor: `${brand.accent}20`, color: brand.accent }}
@@ -602,11 +602,11 @@ export default function StarterKitAndPartners() {
                     </div>
 
                     {/* Credentials Micro-Badges */}
-                    <div className="mt-3 sm:mt-3.5 flex flex-wrap gap-1 sm:gap-1.5">
+                    <div className="mt-3 sm:mt-3.5 flex flex-wrap gap-1.5">
                       {brand.credentials.map((cred, cIdx) => (
                         <span
                           key={cIdx}
-                          className="text-[9.5px] sm:text-[10px] font-medium px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-[#FAF8F3] text-stone-600 border border-stone-200/60"
+                          className="text-[10px] font-medium px-2.5 py-1 rounded-full bg-[#FAF8F3] text-stone-600 border border-stone-200/60"
                         >
                           {cred}
                         </span>
@@ -615,7 +615,7 @@ export default function StarterKitAndPartners() {
                   </div>
 
                   {/* Card Footer Action */}
-                  <div className="mt-5 sm:mt-6 pt-3.5 sm:pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <div className="mt-5 sm:mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
                     <button
                       type="button"
                       onClick={() => navigate('#categories', { title: brand.name })}

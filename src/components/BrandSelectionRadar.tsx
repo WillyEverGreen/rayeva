@@ -211,6 +211,8 @@ export default function BrandSelectionRadar() {
     }
   };
 
+  const activeStandard = STANDARDS.find((s) => s.id === activeNodeId) || null;
+
   return (
     <section
       ref={sectionRef}
@@ -414,20 +416,20 @@ export default function BrandSelectionRadar() {
                       </span>
                     </div>
 
-                    {/* Anchored Interactive Card Appearing on Click */}
+                    {/* Desktop Anchored Card (hidden on mobile, zero transform collision) */}
                     {isActive && (
                       <div
                         onClick={(e) => e.stopPropagation()}
                         onMouseEnter={() => handleMouseEnterCardOrNode(std.id)}
                         onMouseLeave={handleMouseLeaveCardOrNode}
-                        className={`fixed bottom-5 inset-x-4 max-w-sm mx-auto sm:max-w-none sm:w-80 sm:mx-0 sm:bottom-auto sm:inset-x-auto sm:absolute bg-white/98 backdrop-blur-xl rounded-2xl p-5 border border-stone-200 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition-all duration-300 animate-in fade-in zoom-in-95 cursor-default z-50 sm:before:absolute sm:before:inset-[-14px] sm:before:content-[''] sm:before:-z-10 ${
+                        className={`hidden sm:block absolute w-80 bg-white/98 backdrop-blur-xl rounded-2xl p-5 border border-stone-200 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition-all duration-300 animate-in fade-in zoom-in-95 cursor-default z-50 before:absolute before:inset-[-14px] before:content-[''] before:-z-10 ${
                           y < -30
-                            ? 'sm:top-full sm:mt-3 sm:left-1/2 sm:-translate-x-1/2'
+                            ? 'top-full mt-3 left-1/2 -translate-x-1/2'
                             : y > 30
-                            ? 'sm:bottom-full sm:mb-3 sm:left-1/2 sm:-translate-x-1/2'
+                            ? 'bottom-full mb-3 left-1/2 -translate-x-1/2'
                             : x > 0
-                            ? 'sm:right-full sm:mr-3 sm:top-1/2 sm:-translate-y-1/2'
-                            : 'sm:left-full sm:ml-3 sm:top-1/2 sm:-translate-y-1/2'
+                            ? 'right-full mr-3 top-1/2 -translate-y-1/2'
+                            : 'left-full ml-3 top-1/2 -translate-y-1/2'
                         }`}
                       >
                         {/* Header */}
@@ -481,6 +483,60 @@ export default function BrandSelectionRadar() {
               })}
 
             </div>
+
+            {/* Mobile Active Standard Detail Card (Clean, Full-Width, Un-Trapped) */}
+            {activeStandard && (
+              <div
+                onClick={(e) => e.stopPropagation()}
+                className="sm:hidden w-full max-w-sm mx-auto mt-6 bg-white/98 backdrop-blur-xl rounded-3xl p-5 border border-stone-200/90 shadow-[0_16px_40px_rgba(0,0,0,0.12)] animate-in fade-in slide-in-from-bottom-3 duration-300 relative z-30"
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between gap-2 mb-2.5 pb-2.5 border-b border-stone-100">
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className="w-3.5 h-3.5 rounded-full shrink-0 shadow-xs"
+                      style={{ backgroundColor: activeStandard.color }}
+                    />
+                    <h4 className="font-serif text-lg font-medium text-stone-900 leading-snug">
+                      {activeStandard.title}
+                    </h4>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-semibold uppercase px-2.5 py-0.5 rounded-full bg-[#E3EFE7] text-[#244835] font-sans">
+                      {activeStandard.energy}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setActiveNodeId(null)}
+                      className="text-stone-400 hover:text-stone-700 p-1 rounded-full hover:bg-stone-100 transition-colors"
+                      aria-label="Close standard details"
+                    >
+                      <X size={16} />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Headline */}
+                <p className="text-xs sm:text-[13px] font-semibold text-stone-800 font-sans mb-1.5 leading-snug">
+                  {activeStandard.headline}
+                </p>
+
+                {/* Description */}
+                <p className="text-xs sm:text-[13px] text-stone-600 font-sans leading-relaxed mb-3.5">
+                  {activeStandard.description}
+                </p>
+
+                {/* Audit Footnote */}
+                <div className="pt-2.5 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500 font-sans">
+                  <span className="flex items-center gap-1.5 text-[#187E91] font-medium truncate max-w-[210px]">
+                    <FileCheck2 size={13} className="shrink-0" />
+                    <span className="truncate">Audit: {activeStandard.auditMethod}</span>
+                  </span>
+                  <span className="font-mono text-stone-400 text-[10px]">0{activeStandard.id}/06</span>
+                </div>
+              </div>
+            )}
 
           </div>
 

@@ -283,8 +283,8 @@ export default function TrendingProductsSection() {
             </p>
           </div>
 
-          {/* Right Action: Category Filter Tabs & Horizontal Scroll Arrows */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+          {/* Right Action: Category Filter Tabs */}
+          <div className="flex items-center">
             {/* Filter tabs — scrollable on mobile */}
             <div className="overflow-x-auto no-scrollbar">
               <div className="flex items-center gap-1 sm:gap-1.5 p-1 sm:p-1.5 rounded-full bg-white/90 border border-stone-200/80 backdrop-blur-md shadow-xs w-max">
@@ -309,26 +309,6 @@ export default function TrendingProductsSection() {
                 ))}
               </div>
             </div>
-
-            {/* Scroll Arrow Buttons */}
-            <div className="flex items-center gap-2 shrink-0">
-              <button
-                type="button"
-                aria-label="Scroll products left"
-                onClick={() => scrollLine('left')}
-                className="w-10 h-10 rounded-full bg-white hover:bg-[#187E91] text-stone-800 hover:text-white border border-stone-200 shadow-2xs flex items-center justify-center transition-colors active:scale-95 cursor-pointer shrink-0"
-              >
-                <ArrowLeft size={16} />
-              </button>
-              <button
-                type="button"
-                aria-label="Scroll products right"
-                onClick={() => scrollLine('right')}
-                className="w-10 h-10 rounded-full bg-white hover:bg-[#187E91] text-stone-800 hover:text-white border border-stone-200 shadow-2xs flex items-center justify-center transition-colors active:scale-95 cursor-pointer shrink-0"
-              >
-                <ArrowRight size={16} />
-              </button>
-            </div>
           </div>
         </div>
 
@@ -343,7 +323,7 @@ export default function TrendingProductsSection() {
               return (
                 <div
                   key={prod.id}
-                  className="product-card-anim shrink-0 snap-center w-[76vw] max-w-[285px] sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_-10px_rgba(24,126,145,0.18)] transition-all duration-400 hover:-translate-y-1.5 flex flex-col justify-between"
+                  className="product-card-anim shrink-0 snap-center w-[82vw] max-w-[320px] sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden border border-stone-200/80 shadow-[0_6px_24px_-6px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_-10px_rgba(24,126,145,0.18)] transition-all duration-400 hover:-translate-y-1.5 flex flex-col justify-between"
                 >
                   {/* Photo with high contrast & accurate product image */}
                   <div className="relative aspect-[16/11] overflow-hidden bg-stone-100">
@@ -469,6 +449,29 @@ export default function TrendingProductsSection() {
               );
             })}
           </div>
+        </div>
+
+        {/* Centered Left / Right Arrow Controls Below Products */}
+        <div className="mt-7 flex items-center justify-center gap-3">
+          <button
+            type="button"
+            aria-label="Scroll products left"
+            onClick={() => scrollLine('left')}
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-[#187E91] text-stone-700 hover:text-white border border-stone-200/90 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30 shrink-0"
+          >
+            <ArrowLeft size={16} />
+          </button>
+          <span className="text-xs font-semibold text-stone-500 font-mono tracking-wider px-2 select-none">
+            Explore Products
+          </span>
+          <button
+            type="button"
+            aria-label="Scroll products right"
+            onClick={() => scrollLine('right')}
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-[#187E91] text-stone-700 hover:text-white border border-stone-200/90 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#187E91]/30 shrink-0"
+          >
+            <ArrowRight size={16} />
+          </button>
         </div>
 
         {/* Bottom Catalog Link Banner */}
